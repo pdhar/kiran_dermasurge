@@ -728,6 +728,116 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 
  */
 
+ul.accordion{
+    list-style:none;   
+    position:absolute;
+    right:80px;
+    top:0px;
+    font-family: Cambria, serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5em;
+}
+ul.accordion li{
+    float:right;
+    width:115px;
+    height:480px;
+    display:block;
+    border-right:2px solid #fff;
+    border-bottom:2px solid #fff;
+    background-color:#fff;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    -moz-box-shadow:1px 3px 15px #555;
+    -webkit-box-shadow:1px 3px 15px #555;
+    box-shadow:1px 3px 15px #555;
+}
+ul.accordion li.bg1{
+    background-image:url('1.jpg');
+}
+ul.accordion li.bg2{
+    background-image:url('1.jpg');
+}
+ul.accordion li.bg3{
+    background-image:url('1.jpg');
+}
+ul.accordion li.bg4{
+    background-image:url('1.jpg');
+}
+ul.accordion li.bleft{
+    border-left:2px solid #fff;
+}
+ul.accordion li .heading{
+    background-color:#fff;
+    padding:10px;
+    margin-top:60px;
+    opacity:0.9;
+    text-transform:uppercase;
+    font-style:normal;
+    font-weight:bold;
+    letter-spacing:1px;
+    font-size:14px;
+    color:#444;
+    text-align:center;
+    text-shadow:-1px -1px 1px #ccc;
+}
+ul.accordion li .description{
+    position:absolute;
+    width:480px;
+    height:175px;
+    bottom:0px;
+    left:0px;
+    display:none;
+}
+ul.accordion li .description h2{
+    text-transform:uppercase;
+    font-style:normal;
+    font-weight:bold;
+    letter-spacing:1px;
+    font-size:45px;
+    color:#444;
+    text-align:left;
+    margin:0px 0px 15px 20px;
+    text-shadow:-1px -1px 1px #ccc;
+}
+ul.accordion li .description p{
+    line-height:14px;
+    margin:10px 22px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1.6em;
+}
+ul.accordion li .description a{
+    position:absolute;
+    bottom:5px;
+    left:20px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-size:11px;
+    text-decoration:none;
+    color:#888;
+}
+ul.accordion li .description a:hover{
+    color:#333;
+    text-decoration:underline;
+}
+
+ul.accordion li .bgDescription{
+    background:transparent url('bgDescription.png') repeat-x top left;
+    height:340px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    display:none;
+}
 html{overflow-y:scroll;}
 body{padding-top:60px;}
 section{overflow:auto;}
@@ -1414,6 +1524,18 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 a.thumbnail:hover{border-color:#2fa4e7;-webkit-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);-moz-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);}
 .thumbnail>img{display:block;max-width:100%;margin-left:auto;margin-right:auto;}
 .thumbnail .caption{padding:9px;}
+.label{padding:1px 4px 2px;font-size:11.844px;font-weight:bold;line-height:13px;color:#ffffff;vertical-align:middle;white-space:nowrap;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);background-color:#999999;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.label:hover{color:#ffffff;text-decoration:none;}
+.label-important{background-color:#bd4247;}
+.label-important:hover{background-color:#983538;}
+.label-warning{background-color:#dd5600;}
+.label-warning:hover{background-color:#aa4200;}
+.label-success{background-color:#669533;}
+.label-success:hover{background-color:#4c6f26;}
+.label-info{background-color:#817b58;}
+.label-info:hover{background-color:#625e43;}
+.label-inverse{background-color:#333333;}
+.label-inverse:hover{background-color:#1a1a1a;}
 @-webkit-keyframes progress-bar-stripes{from{background-position:40px 0;} to{background-position:0 0;}}@-moz-keyframes progress-bar-stripes{from{background-position:40px 0;} to{background-position:0 0;}}@-ms-keyframes progress-bar-stripes{from{background-position:40px 0;} to{background-position:0 0;}}@-o-keyframes progress-bar-stripes{from{background-position:0 0;} to{background-position:40px 0;}}@keyframes progress-bar-stripes{from{background-position:40px 0;} to{background-position:0 0;}}.progress{overflow:hidden;height:18px;margin-bottom:18px;background-color:#f7f7f7;background-image:-moz-linear-gradient(top, #f5f5f5, #f9f9f9);background-image:-ms-linear-gradient(top, #f5f5f5, #f9f9f9);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));background-image:-webkit-linear-gradient(top, #f5f5f5, #f9f9f9);background-image:-o-linear-gradient(top, #f5f5f5, #f9f9f9);background-image:linear-gradient(top, #f5f5f5, #f9f9f9);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);-moz-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
 .progress .bar{width:0%;height:18px;color:#ffffff;font-size:12px;text-align:center;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);background-color:#0e90d2;background-image:-moz-linear-gradient(top, #149bdf, #0480be);background-image:-ms-linear-gradient(top, #149bdf, #0480be);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));background-image:-webkit-linear-gradient(top, #149bdf, #0480be);background-image:-o-linear-gradient(top, #149bdf, #0480be);background-image:linear-gradient(top, #149bdf, #0480be);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);-webkit-box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);-moz-box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;-webkit-transition:width 0.6s ease;-moz-transition:width 0.6s ease;-ms-transition:width 0.6s ease;-o-transition:width 0.6s ease;transition:width 0.6s ease;}
 .progress-striped .bar{background-color:#149bdf;background-image:-webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));background-image:-webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image:-moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image:-ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image:-o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image:linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);-webkit-background-size:40px 40px;-moz-background-size:40px 40px;-o-background-size:40px 40px;background-size:40px 40px;}
@@ -1450,6 +1572,18 @@ a.thumbnail:hover{border-color:#2fa4e7;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .carousel-caption h4,.carousel-caption p{color:#ffffff;}
 .hero-unit{padding:60px;margin-bottom:30px;background-color:#f5f5f5;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}.hero-unit h1{margin-bottom:0;font-size:60px;line-height:1;color:inherit;letter-spacing:-1px;}
 .hero-unit p{font-size:18px;font-weight:200;line-height:30px;color:inherit;}
+.badge{padding:1px 9px 2px;font-size:12.950000000000001px;font-weight:bold;white-space:nowrap;color:#ffffff;background-color:#999999;-webkit-border-radius:9px;-moz-border-radius:9px;border-radius:9px;}
+.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
+.badge-error{background-color:#bd4247;}
+.badge-error:hover{background-color:#983538;}
+.badge-warning{background-color:#dd5600;}
+.badge-warning:hover{background-color:#aa4200;}
+.badge-success{background-color:#669533;}
+.badge-success:hover{background-color:#4c6f26;}
+.badge-info{background-color:#817b58;}
+.badge-info:hover{background-color:#625e43;}
+.badge-inverse{background-color:#333333;}
+.badge-inverse:hover{background-color:#1a1a1a;}
 .pull-right{float:right;}
 .pull-left{float:left;}
 .hide{display:none;}
@@ -1469,33 +1603,99 @@ a.thumbnail:hover{border-color:#2fa4e7;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 /*
 * This file contains styles that are common to all kwicks instances. Note that each kwicks instance requires
 * additional styling - please see the examples for more info.
+
 */
 
+
+
 .kwicks {
-display: block;
-list-style-type: none;
-list-style: none;
-position: relative;
-margin: 0;
-padding: 0;
+	display: block;
+	list-style-type: none;
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	
+	
+	overflow:hidden;
+	width:1000px;
+	height:374px;
+	z-index:1;
+	
 }
+
+
 .kwicks > * {
-display: block;
-overflow: hidden;
-padding: 0;
-margin: 0;
+	display: block;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
 }
 .kwicks.kwicks-processed > * {
-margin: 0;
-position: absolute;
+	margin: 0;
+	position: absolute;
 }
 .kwicks-horizontal > * {
-float: left;
+	float: left;
 }
 .kwicks-horizontal > :first-child {
-margin-left: 0;
+	margin-left: 0;
 }
 .kwicks-vertical > :first-child {
-margin-top: 0;
+	margin-top: 0;
+}
+
+
+.kwicks li{
+	/* these are required, but the values are up to you (must be pixel) */
+	width: 10px;
+	height: 374px;
+	/*do not change these */
+	display: block;
+	overflow: hidden;
+	padding: 0;  /* if you need padding, do so with an inner div (or implement your own box-model hack) */
+	background:none;
+}
+.kwicks.horizontal li {
+	/* This is optional and will be disregarded by the script.  However, it should be provided for non-JS enabled browsers. */
+	margin-right: 0; /*Set to same as spacing option. */
+	float: left;
+	position:relative;
+	font-weight:normal;
+}
+.kwicks.horizontal li a {
+	display:block;
+	float:left;
+	text-decoration:none;
+}
+
+#panel-1 { 
+	background-color: #53b388; 
+	background-image:url('skin_bw2.jpg');
+}
+
+
+#panel-2 { background-color: #5a69a9;
+background-image:url('skin_bw2.jpg'); }
+
+#panel-3 { background-color: #c26468; }
+#panel-4 { background-color: #bf7cc7; }
+#panel-5 { background-color: #000; }
+
+
+#panel-1.active, #panel-1:hover { 
+	background-image:url('skin_color2.jpg');
+}
+
+#panel-2.active, #panel-2:hover{
+	background-image:url('skin_color2.jpg');
+}
+
+#panel-3.active, #panel-3:hover {
+	background-position: -800px bottom;
+}
+
+#panel-4.active, #panel-4:hover {
+	background-position: -1200px bottom; 
 }
 

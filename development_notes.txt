@@ -1,0 +1,47 @@
+POSTGRES Setup (Changes to config/database.yml file):
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_app_development
+  pool: 5
+  username: postgres
+  password: wasd@123
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_app_test
+  pool: 5 
+  username: postgres
+  password: wasd@123  
+
+Creating a new db
+rake db:create:all
+
+migrating db commands
+bundle exec rake db:migrate
+bundle exec rake db:test:prepare
+  
+git commands:
+
+git push -- to push to remote server (github)
+git merge <branch name)
+git commit -am "Message"
+git checkout (branch name)
+
+
+Issue with Mac OS X Postgresql Installation:
+Error:
+checking for pg_config... no
+No pg_config... trying anyway. If building fails, please try again with
+ --with-pg-config=/path/to/pg_config
+checking for libpq-fe.h... no
+
+Solution:
+sudo PATH=$PATH:/Library/PostgreSQL/9.2/bin gem install pg
+
+sudo PATH=$PATH:/Library/PostgreSQL/9.2/bin/ bundle install
+
+replace 9.1 with your version number.
+
