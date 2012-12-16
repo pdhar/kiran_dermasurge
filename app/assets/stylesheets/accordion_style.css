@@ -10,8 +10,8 @@ ul.accordion{
 }
 ul.accordion li{
     float:left;
-    width:170px;
-    height:480px;
+    width:175px;
+    height:350px;
     display:block;
     border-right:2px solid #fff;
     border-bottom:2px solid #fff;

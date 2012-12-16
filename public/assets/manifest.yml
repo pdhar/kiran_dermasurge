@@ -1,10 +1,14 @@
 ---
 1.jpg: 1-67e97738793a1346577df6736ce08eaf.jpg
 1/index.jpg: 1-67e97738793a1346577df6736ce08eaf.jpg
+bgDescription.png: bgDescription-a6e0fbcf9fde42cebbf15cffb7434d90.png
+bgDescription/index.png: bgDescription-a6e0fbcf9fde42cebbf15cffb7434d90.png
+favicon.ico: favicon-316216664b26769db355463df4979aef.ico
+favicon/index.ico: favicon-316216664b26769db355463df4979aef.ico
 img_logo2.png: img_logo2-8443bc4b2b0d3ed9cef5ae41510f6034.png
 img_logo2/index.png: img_logo2-8443bc4b2b0d3ed9cef5ae41510f6034.png
-kwicks_bg.jpg: kwicks_bg-f0902b70b333d50100aefbadc7775a7d.jpg
-kwicks_bg/index.jpg: kwicks_bg-f0902b70b333d50100aefbadc7775a7d.jpg
+mailinglist_icon.png: mailinglist_icon-feae6e65c7fe6e6b0cd42f2a4e2a69c7.png
+mailinglist_icon/index.png: mailinglist_icon-feae6e65c7fe6e6b0cd42f2a4e2a69c7.png
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 skin_bw2.jpg: skin_bw2-d630c29ae6c16c5dd90eefe2bc9e6593.jpg
@@ -13,14 +17,12 @@ skin_color.jpg: skin_color-b67cdfa51b858b31cce8324788e696a0.jpg
 skin_color/index.jpg: skin_color-b67cdfa51b858b31cce8324788e696a0.jpg
 skin_color2.jpg: skin_color2-105c1d705595b2c4f7e01ae2e4dcc694.jpg
 skin_color2/index.jpg: skin_color2-105c1d705595b2c4f7e01ae2e4dcc694.jpg
-application.js: application-6115ecffc8379b447c0251a96df91f92.js
-application/index.js: application-6115ecffc8379b447c0251a96df91f92.js
-application.css: application-5f424c437593fe96d7e37f955c284fb3.css
-application/index.css: application-5f424c437593fe96d7e37f955c284fb3.css
+application.js: application-49cd3a943cbf73f8531d1eccb57bddba.js
+application/index.js: application-49cd3a943cbf73f8531d1eccb57bddba.js
+application.css: application-2f6bf8046670a432db26383a5bd3e1aa.css
+application/index.css: application-2f6bf8046670a432db26383a5bd3e1aa.css
 full_control.css: full_control-8cf915a22835a618e6e15f5fb0c49db0.css
 full_control/index.css: full_control-8cf915a22835a618e6e15f5fb0c49db0.css
-style_kwicks.css2: style_kwicks-ce4d96eacf420918a472e8a713053f36.css2
-style_kwicks/index.css2: style_kwicks-ce4d96eacf420918a472e8a713053f36.css2
 twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 twitter/bootstrap/glyphicons-halflings-white/index.png: twitter/bootstrap/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings-d63e747535b6b5c589a12cad5d16a401.png

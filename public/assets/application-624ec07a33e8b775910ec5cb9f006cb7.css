@@ -247,8 +247,8 @@ table .span21{float:none;width:1644px;margin-left:0;}
 table .span22{float:none;width:1724px;margin-left:0;}
 table .span23{float:none;width:1804px;margin-left:0;}
 table .span24{float:none;width:1884px;margin-left:0;}
-[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url(/assets/twitter/bootstrap/glyphicons-halflings.png);background-position:14px 14px;background-repeat:no-repeat;}[class^="icon-"]:last-child,[class*=" icon-"]:last-child{*margin-left:0;}
-.icon-white{background-image:url(/assets/twitter/bootstrap/glyphicons-halflings-white.png);}
+[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url(/assets/twitter/bootstrap/glyphicons-halflings-d63e747535b6b5c589a12cad5d16a401.png);background-position:14px 14px;background-repeat:no-repeat;}[class^="icon-"]:last-child,[class*=" icon-"]:last-child{*margin-left:0;}
+.icon-white{background-image:url(/assets/twitter/bootstrap/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png);}
 .icon-glass{background-position:0 0;}
 .icon-music{background-position:-24px 0;}
 .icon-search{background-position:-48px 0;}
@@ -729,6 +729,68 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
  */
 
 
+ html, body {
+
+height: 100%;
+
+}
+
+footer {
+
+color: #666;
+
+background: #222;
+
+padding: 17px 0 18px 0;
+
+border-top: 1px solid #000;
+
+}
+
+footer a {
+
+color: #999;
+
+}
+
+footer a:hover {
+
+color: #efefef;
+
+}
+
+.wrapper {
+
+min-height: 100%;
+
+height: auto !important;
+
+height: 100%;
+
+margin: 0 auto -63px;
+
+}
+
+.push {
+
+height: 63px;
+
+}
+
+/* not required for sticky footer; just pushes hero down a bit */
+
+.wrapper > .container {
+
+padding-top: 60px;
+
+}
+
+body {
+  padding-top: 0;
+}
+.container {
+  border-top: 60px solid transparent;
+}
 ul.accordion{
     list-style:none;   
     position:relative;
