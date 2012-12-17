@@ -16,4 +16,5 @@ group :assets do
 end
 
 gem 'devise'
+gem 'omniauth-twitter'
 

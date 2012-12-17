@@ -75,3 +75,5 @@ add links for log in and sign up
 
 run to generate custom views: rails g devise:views
  
+omniauth for twitter(Add Later)
+
