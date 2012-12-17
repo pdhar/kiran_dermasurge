@@ -15,5 +15,5 @@ group :assets do
       
 end
 
-
+gem 'devise'
 

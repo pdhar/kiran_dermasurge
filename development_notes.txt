@@ -61,3 +61,17 @@ cd node
 ./configure
 make
 sudo make install
+
+Adding Devise Authentication:
+
+add 'devise' gem to Gemfile
+run command: rails g devise:install
+set for heroku deployment: config.assets.initialize_on_precompile = false
+
+create user model using: rails devise user
+run: rake db:migrate
+
+add links for log in and sign up
+
+run to generate custom views: rails g devise:views
+ 

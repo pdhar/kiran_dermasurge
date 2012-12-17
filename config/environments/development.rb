@@ -41,4 +41,7 @@ KiranDermasurge::Application.configure do
     'basic_less.css',
     'full_control.css'
   ]
+  
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
