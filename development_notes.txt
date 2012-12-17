@@ -45,3 +45,19 @@ sudo PATH=$PATH:/Library/PostgreSQL/9.2/bin/ bundle install
 
 replace 9.1 with your version number.
 
+
+Installing Homebrew
+ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+
+Installing Node.js
+
+http://howtonode.org/how-to-install-nodejs
+brew install node
+
+or 
+
+git clone git://github.com/ry/node.git
+cd node
+./configure
+make
+sudo make install
