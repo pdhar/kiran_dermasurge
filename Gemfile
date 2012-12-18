@@ -17,5 +17,7 @@ end
 
 gem 'devise'
 gem 'omniauth-twitter'
-gem 'simple_form'
+gem "cancan", ">= 1.6.8"
+gem "rolify", ">= 3.2.0"
+gem "figaro", ">= 0.5.0"
 

@@ -1,9 +1,17 @@
 KiranDermasurge::Application.routes.draw do
-  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
-
+  authenticated :user do
+    root :to => 'static_pages#home'
+  end
+  
   root to: 'static_pages#home'
+  
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  resources :users
+  
+  
   match '/help', to: 'static_pages#help'
-
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

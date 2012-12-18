@@ -5,3 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+puts 'ROLES'
+YAML.load(ENV['ROLES']).each do |role|
+  Role.find_or_create_by_name({ :name => role }, :without_protection => true)
+  puts 'role: ' << role
+end
+puts 'DEFAULT USERS'
+user = User.create :username => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
+puts 'user: ' << user.username
+user.add_role :admin
+
+user2 = User.create :username => 'admin', :email => 'admin@example.com', :password => '123456', :password_confirmation => '123456'
+puts 'user: ' << user2.username
+user2.add_role :user
+
+user3 = User.create :username => 'Second User', :email => 'user2@example.com', :password => 'please', :password_confirmation => 'please'
+puts 'user: ' << user3.username
+user3.add_role :VIP
