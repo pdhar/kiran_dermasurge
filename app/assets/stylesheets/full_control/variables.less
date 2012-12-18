@@ -21,7 +21,7 @@
 @grayLight:             #999;
 @grayLighter:           #F5F5F5;
 @white:                 #fff;
-@kds_purple:            rgba(0, 200, 196, 0.5);
+@kds_aquamarine:            rgba(0, 200, 196, 0.5);
 
 //@kds_purple:            #00c8c4;
 
@@ -95,7 +95,7 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         darken(@white, 20%);
 
-@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackground:              @kds_purple;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
 
 @btnInfoBackground:                 @purple;
@@ -185,18 +185,18 @@
 // Navbar
 // -------------------------
 
-@kds_purple2: #5c5c9e; 
+@kds_purple: #5c5c9e; 
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    45px;
 @navbarBackgroundHighlight:       lighten(@navbarBackground, 8%);
-@navbarBackground:                @kds_purple;
+@navbarBackground:                @kds_aquamarine;
 @navbarBorder:                    darken(@navbarBackground, 8%);
 
 @navbarText:                      @grayLighter;
-@navbarLinkColor:                 @kds_purple2;
-@navbarLinkColorHover:            @kds_purple2;
+@navbarLinkColor:                 @kds_purple;
+@navbarLinkColorHover:            @kds_purple;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       lighten(@navbarBackground, 12%);
 @navbarLinkBackgroundActive:      lighten(@navbarBackground, 12%);

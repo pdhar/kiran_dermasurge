@@ -3,7 +3,7 @@
 		<div class="container" valign="center">
 
 			<!--<%= link_to "kiran dermasurge", root_path, id: "logo" %>-->
-			<%= link_to image_tag("img_logo2.png", alt: "Rails", border: "0"), root_path, id: "logo" %>
+			<%= link_to image_tag("img_logo2.png", alt: "Rails", border: "0"), root_path, id: "logo", :class => 'brand' %>
 
 			<nav>
 				<ul class="nav pull-left">
@@ -12,48 +12,63 @@
 					<li>
 						<%= link_to "Services", "#" %>
 					</li>
+					<li class="divider-vertical"></li>
 					<li>
 						<%= link_to "Our Doctor", "#" %>
 					</li>
+					<li class="divider-vertical"></li>
 					<li>
 						<%= link_to "What's New", "#" %>
 					</li>
+					<li class="divider-vertical"></li>
 					<li>
 						<%= link_to "Media", "#" %>
 					</li>
+					<li class="divider-vertical"></li>
 					<li>
 						<%= link_to "Testimonial", "#" %>
 					</li>
 
-					<li>
-						<%= link_to "Help", help_path %>
-					</li>
-
 				</ul>
 				<ul class="nav pull-right">
-					<% if user_signed_in? %>
-					<li id="fat-menu" class="dropdown">
+					<li class="divider-vertical"></li>
 
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user.username %> <b class="caret"></b> </a>
-						<ul class="dropdown-menu">
-							<li>
-								<%= link_to "Profile", edit_user_registration_path %>
-							</li>
-							<li>
-								<%= link_to "Settings", '#' %>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
-							</li>
-						</ul>
+					<% if user_signed_in? %>
+					<li>
+						<div class="btn-group">
+							<a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> <%= current_user.username %> </a>
+							<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+
+									<%= link_to "Profile", edit_user_registration_path %>
+								</li>
+								<li>
+									<a href="#"><i class="icon-trash"></i> Settings</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+								</li>
+							</ul>
+						</div>
 					</li>
+
 					<% else %>
 					<li>
-						<%= link_to "Sign in", new_user_session_path %>
+						<% if !current_page?(new_user_session_path) %>
+						<div class="btn-group">
+							<%= link_to "Sign in", new_user_session_path, :class => 'btn btn-mini btn-primary' %>
+						</div>
+						<% end %>
 					</li>
 					<li>
-						<%= link_to "Sign up", new_user_registration_path %>
+						<% if current_page?(new_user_session_path) %>
+						<div class="btn-group">
+							<%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-mini btn-primary' %>	
+						</div>
+						
+						<% end %>
 					</li>
 					<% end %>
 
