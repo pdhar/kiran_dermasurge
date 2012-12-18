@@ -20,6 +20,10 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
+    <% case provider.to_s.downcase when "twitter"%>
+    	<%= link_to image_tag("sign-in-with-twitter-gray.png", alt: "Sign in with #{provider.to_s.titleize}"), omniauth_authorize_path(resource_name, provider) %>
+    <% when "facebook" %> <p>asdkjashdkj</p>
+    <% else %><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
+    <% end %>
   <% end -%>
 <% end -%>

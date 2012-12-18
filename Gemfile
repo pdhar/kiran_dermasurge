@@ -17,4 +17,5 @@ end
 
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'simple_form'
 

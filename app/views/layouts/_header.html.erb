@@ -1,44 +1,73 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container" valign="center">
-    	
-      <!--<%= link_to "kiran dermasurge", root_path, id: "logo" %>-->
-      <%= link_to image_tag("img_logo2.png", alt: "Rails", border: "0"), root_path, id: "logo" %>
-      
-      <nav>
-        <ul class="nav pull-right">
-          <!-- Services,  Out Doctor, What's New, Media, Testimonial, FAQ's , Contact-->
-          <li><%= link_to "Sign In", "#" %></li>	
-          <li><%= link_to "Services", "#" %></li>
-          <li><%= link_to "Our Doctor", "#" %></li>
-          <li><%= link_to "What's New", "#" %></li>
-          <li><%= link_to "Media", "#" %></li>
-          <li><%= link_to "Testimonial", "#" %></li>
-          
-          <li><%= link_to "Help", help_path %></li>
-          
-          
+	<div class="navbar-inner">
+		<div class="container" valign="center">
 
-          
-        </ul>
-        
-        
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path %> |
-  <%= link_to "Login", new_user_session_path %>
-  
+			<!--<%= link_to "kiran dermasurge", root_path, id: "logo" %>-->
+			<%= link_to image_tag("img_logo2.png", alt: "Rails", border: "0"), root_path, id: "logo" %>
 
-<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+			<nav>
+				<ul class="nav pull-left">
+					<!-- Services,  Out Doctor, What's New, Media, Testimonial, FAQ's , Contact-->
 
+					<li>
+						<%= link_to "Services", "#" %>
+					</li>
+					<li>
+						<%= link_to "Our Doctor", "#" %>
+					</li>
+					<li>
+						<%= link_to "What's New", "#" %>
+					</li>
+					<li>
+						<%= link_to "Media", "#" %>
+					</li>
+					<li>
+						<%= link_to "Testimonial", "#" %>
+					</li>
 
-<% end %>
+					<li>
+						<%= link_to "Help", help_path %>
+					</li>
 
+				</ul>
+				<ul class="nav pull-right">
+					<% if user_signed_in? %>
+					<li id="fat-menu" class="dropdown">
 
-      </nav>
-    </div>
-  </div>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user.username %> <b class="caret"></b> </a>
+						<ul class="dropdown-menu">
+							<li>
+								<%= link_to "Profile", edit_user_registration_path %>
+							</li>
+							<li>
+								<%= link_to "Settings", '#' %>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+							</li>
+						</ul>
+					</li>
+					<% else %>
+					<li>
+						<%= link_to "Sign in", new_user_session_path %>
+					</li>
+					<li>
+						<%= link_to "Sign up", new_user_registration_path %>
+					</li>
+					<% end %>
+
+				</ul>
+
+			</nav>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//Required to initialize the dropdown menu
+		$(function() {
+			$('.dropdown-toggle').dropdown();
+		});
+	</script>
+
 </header>

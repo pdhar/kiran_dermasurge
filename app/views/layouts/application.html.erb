@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= favicon_link_tag 'favicon.ico' %>
-    <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>    
-  </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>		
-      <%= yield %>
-      
-      <%= debug(params) if Rails.env.development? %>
-    </div>
-    
-    <div style="background-color: rgba(92,92,158,0.95)" class="navbar navbar-fixed-bottom">
-    	<div class="container">
-    		<%= render 'layouts/footer' %>
-    	</div>
-	</div>
-    
-  </body>
+	<head>
+		<title><%= full_title(yield(:title)) %></title>
+		<%= favicon_link_tag 'favicon.ico' %>
+		<%= stylesheet_link_tag    "application", media: "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
+	</head>
+	<body>
+		<%= render 'layouts/header' %>
+
+		<div class="container">
+			<% flash.each do |key, value| %>
+			<div class="alert alert-<%= key %>">
+				<%= value %>
+			</div>
+			
+			<% end %>
+			
+			
+			<!--div class="modal hide fade in" data-backdrop="static" id="RegistrationEditModal">
+				<div class="modal-header">
+					<a class="close" data-dismiss="modal">×</a>
+					<h3>This is a Modal Heading</h3>
+				</div>
+				<div class="modal-body">
+					#render 'devise/registrations/edit' 
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-success">Call to action</a>
+					<a href="#" class="btn" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+			
+			<a class="btn" data-toggle="modal" href="#user-edit" >Launch Modal</a-->
+			
+			<%= yield %>
+
+			<%= debug(params) if Rails.env.development? %>
+		</div>
+
+		<div style="background-color: rgba(92,92,158,0.95)" class="navbar navbar-fixed-bottom">
+			<div class="container">
+				<%= render 'layouts/footer' %>
+			</div>
+		</div>
+
+	</body>
 </html>
