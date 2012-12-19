@@ -5,7 +5,4 @@ class StaticPagesController < ApplicationController
   def help
   end
   
-  def users
-    @users = User.all
-  end
 end

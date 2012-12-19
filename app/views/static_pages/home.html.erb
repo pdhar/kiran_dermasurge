@@ -4,16 +4,19 @@
 		<td>
 			<ul class="accordion" id="accordion">
 			    <li class="bg1">
+			        <div class="bgImage bg_color1"></div>
 			        <div class="heading">Skin<br/>Rejuvenation</div>
+			        
 			        <div class="bgDescription"></div>
 			        <div class="description">
-			            <h2>Skin<br/>Rejuvenation</h2>
+			            <h2>Skin Rejuvenation</h2>
 			            <p>Offering; Acne treatment, Peeling, Stretch Marks,
 		            	<br/>Scar revision, Skin Imperfection</p>
 			            <a href="#">more &rarr;</a>
 			        </div>
 			    </li>
 			    <li class="bg2">
+			        <div class="bgImage bg_color2"></div>
 			        <div class="heading">Hair<br/>Reduction</div>
 			        <div class="bgDescription"></div>
 			        <div class="description">
@@ -25,6 +28,7 @@
 			
 			    </li>
 			    <li class="bg3">
+			        <div class="bgImage bg_color3"></div>
 			        <div class="heading">Vitiligo<br/>&nbsp;</div>
 			        <div class="bgDescription"></div>
 			        <div class="description">
@@ -36,6 +40,7 @@
 			
 			    </li>
 			    <li class="bg4 bleft">
+			    	<div class="bgImage bg_color4"></div>
 			        <div class="heading">Anti Aging<br/>&nbsp;</div>
 			        <div class="bgDescription"></div>
 			        <div class="description">
@@ -45,7 +50,8 @@
 			        </div>
 			
 			    </li>
-			    <li class="bg4 bleft">
+			    <li class="bg5 bleft">
+			    	<div class="bgImage bg_color5"></div>
 			        <div class="heading">Body<br/>Shaping</div>
 			        <div class="bgDescription"></div>
 			        <div class="description">
@@ -92,24 +98,34 @@
 
 <script type="text/javascript">
 	$(function() {
+		//$('.bgDescription').css({ 'opacity' : 0.5 });
+		
 	    $('#accordion > li').hover(
 	        function () {
 	            var $this = $(this);
-	            $this.stop().animate({'width':'250px'},500);
-	            $('.heading',$this).stop(true,true).fadeOut();
+	            $this.stop().animate({'width':'340px'},450);
+	            
+	            $('.bgImage',$this).stop(true,true).fadeIn(1500);
+	            $('.heading',$this).stop(true,true).fadeOut(500);
+	            
 	            $('.bgDescription',$this).stop(true,true).slideDown(500);
 	            $('.description',$this).stop(true,true).fadeIn();
 	            
-	            $this.siblings().stop().animate({'width':'150px'},500);
+	            //$('.bgImage',$this).stop(true,true).toggle();
+	            $this.siblings().stop().animate({'width':'130px'},450);
 	        },
 	        function () {
 	            var $this = $(this);
-	            $this.stop().animate({'width':'170px'},500);
-	            $('.heading',$this).stop(true,true).fadeIn();
+	            $this.stop().animate({'width':'170px'},450);
+	            
 	            $('.description',$this).stop(true,true).fadeOut(500);
 	            $('.bgDescription',$this).stop(true,true).slideUp(700);
+	            $('.heading',$this).stop(true,true).fadeIn(700);
 	            
-	            $this.siblings().stop().animate({'width':'170px'},500);
+	            $('.bgImage',$this).stop(true,true).fadeOut(100);
+	            
+	            $this.siblings().stop().animate({'width':'170px'},450);
+	            
 	        }
 	    );
 	});
