@@ -77,3 +77,11 @@ run to generate custom views: rails g devise:views
  
 omniauth for twitter(Add Later)
 
+
+############### Rake Commands for Database manipulation #################
+To generate a scaffold:
+rails g scaffold page name permalink:string:index content:text --skip-stylesheets
+
+
+
+

@@ -1,4 +1,7 @@
 KiranDermasurge::Application.routes.draw do
+  resources :pages
+
+
   authenticated :user do
     root :to => 'static_pages#home'
   end
