@@ -122,33 +122,32 @@ ul.accordion li .bgImage{
     height:300px;
     background-color:#fff;
     background-repeat:no-repeat;
-    
-    position:relative;
+    position:absolute;
     overflow:hidden;
     cursor:pointer;
     bottom:0px;
     left:0px;
     width:100%;
-    
+    display:none;
 }
 
 ul.accordion li .bg_color1{
 	background:transparent url('accordion_bg1_color.jpg');
-	background-position: center center;
+	
 }
 ul.accordion li .bg_color2{
 	background:transparent url('accordion_bg2_color.jpg');
-	background-position: center center;
+	
 }
 ul.accordion li .bg_color3{
 	background:transparent url('accordion_bg3_color.jpg');
-	background-position: center center;
+	
 }
 ul.accordion li .bg_color4{
 	background:transparent url('accordion_bg4_color.jpg');
-	background-position: center center;
+	
 }
 ul.accordion li .bg_color5{
 	background:transparent url('accordion_bg5_color.jpg');
-	background-position: center center;
+	
 }

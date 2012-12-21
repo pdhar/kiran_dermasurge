@@ -105,24 +105,21 @@
 	            var $this = $(this);
 	            $this.stop().animate({'width':'340px'},450);
 	            
-	            $('.bgImage',$this).stop(true,true).fadeIn(1500);
+	            $('.bgImage',$this).stop(true,true).fadeIn(500);
 	            $('.heading',$this).stop(true,true).fadeOut(500);
-	            
 	            $('.bgDescription',$this).stop(true,true).slideDown(500);
 	            $('.description',$this).stop(true,true).fadeIn();
 	            
-	            //$('.bgImage',$this).stop(true,true).toggle();
 	            $this.siblings().stop().animate({'width':'130px'},450);
 	        },
 	        function () {
 	            var $this = $(this);
 	            $this.stop().animate({'width':'170px'},450);
 	            
+	            $('.bgImage',$this).stop(true,true).fadeOut(100);
 	            $('.description',$this).stop(true,true).fadeOut(500);
 	            $('.bgDescription',$this).stop(true,true).slideUp(700);
 	            $('.heading',$this).stop(true,true).fadeIn(700);
-	            
-	            $('.bgImage',$this).stop(true,true).fadeOut(100);
 	            
 	            $this.siblings().stop().animate({'width':'170px'},450);
 	            
