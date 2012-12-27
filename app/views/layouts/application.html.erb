@@ -9,6 +9,19 @@
 		<%= render 'layouts/shim' %>
 	</head>
 	<body>
+		<link href='http://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
+		<div id="fb-root"></div>
+		<script>
+			( function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id))
+						return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=493272794050268";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+		</script>
 		<%= render 'layouts/header' %>
 
 		<div class="container">
@@ -16,26 +29,25 @@
 			<div class="alert alert-<%= key %>">
 				<%= value %>
 			</div>
-			
+
 			<% end %>
-			
-			
+
 			<!--div class="modal hide fade in" data-backdrop="static" id="RegistrationEditModal">
-				<div class="modal-header">
-					<a class="close" data-dismiss="modal">×</a>
-					<h3>This is a Modal Heading</h3>
-				</div>
-				<div class="modal-body">
-					#render 'devise/registrations/edit' 
-				</div>
-				<div class="modal-footer">
-					<a href="#" class="btn btn-success">Call to action</a>
-					<a href="#" class="btn" data-dismiss="modal">Close</a>
-				</div>
+			<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>This is a Modal Heading</h3>
 			</div>
-			
+			<div class="modal-body">
+			#render 'devise/registrations/edit'
+			</div>
+			<div class="modal-footer">
+			<a href="#" class="btn btn-success">Call to action</a>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+			</div>
+			</div>
+
 			<a class="btn" data-toggle="modal" href="#user-edit" >Launch Modal</a-->
-			
+
 			<%= yield %>
 
 			<%= debug(params) if Rails.env.development? %>

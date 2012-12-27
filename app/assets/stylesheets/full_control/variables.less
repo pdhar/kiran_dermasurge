@@ -22,7 +22,7 @@
 @grayLighter:           #F5F5F5;
 @white:                 #fff;
 @kds_aquamarine:            rgba(0, 200, 196, 0.5);
-
+@kds_purple: #5c5c9e; 
 //@kds_purple:            #00c8c4;
 
 // Accent colors
@@ -56,13 +56,13 @@
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
-@baseFontFamily:        @sansFontFamily;
+@baseFontFamily:        @serifFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @monoFontFamily;
 
-@headingsFontFamily:    'Telex', sans-serif; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    'Scada', sans-serif; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         #317EAC; // empty to use BS default, @textColor
+@headingsColor:         @kds_purple; // #317EAC; empty to use BS default, @textColor
 
 
 // Component sizing
@@ -169,7 +169,7 @@
 
 // Hr border color
 // -------------------------
-@hrBorder:                @grayLighter;
+@hrBorder:                @kds_purple;//@grayLighter;
 
 
 // Horizontal forms & lists
@@ -185,7 +185,7 @@
 // Navbar
 // -------------------------
 
-@kds_purple: #5c5c9e; 
+
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 

@@ -77,6 +77,9 @@ run to generate custom views: rails g devise:views
  
 omniauth for twitter(Add Later)
 
+############SSH KEY ISSUES #########
+
+xclip -sel clip < ~/.ssh/id_rsa.pub
 
 ###Heroku Issue#####
 Problem: App not found after renaming an app from the website:

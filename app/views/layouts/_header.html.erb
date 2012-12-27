@@ -1,4 +1,4 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container" valign="center">
 
@@ -9,68 +9,145 @@
 				<ul class="nav pull-left">
 					<!-- Services,  Out Doctor, What's New, Media, Testimonial, FAQ's , Contact-->
 
-					<li>
-						<%= link_to "Services", "#" %>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">Services <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Skin Rejuvenation</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Acne Treatment</a>
+									</li>
+									<li>
+										<a href="#">Scar Revision</a>
+									</li>
+									<li>
+										<a href="#">Microdermabration</a>
+									</li>
+									<li>
+										<a href="#">Peels</a>
+									</li>
+									<li>
+										<a href="#">Photo Facial</a>
+									</li>
+									<li>
+										<a href="#">Skin tags/moles/warts removal</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Anti Aging</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Botox / Filler</a>
+									</li>
+									<li>
+										<a href="#">Face Lift</a>
+									</li>
+									<li>
+										<a href="#">Thread Lift</a>
+									</li>
+									<li>
+										<a href="#">Laser Resurfacing</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="dropdown-submenu">
+								<a href="#">Body Contouring</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Body Shaping</a>
+									</li>
+									<li>
+										<a href="#">Mesotherapy</a>
+									</li>
+									<li>
+										<a href="#">Liposuction</a>
+									</li>
+								</ul>
+							</li>
+							<!--li class="divider"></li-->
+							<!--li class="nav-header">Nav header</li-->
+							<li class="dropdown-submenu">
+								<a href="#">Vitiligo Treatment</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Surgical</a>
+									</li>
+									<li>
+										<a href="#">Medical</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Hair Reduction</a>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Hair Treatment</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Hair Transplant</a>
+									</li>
+									<li>
+										<a href="#">Hair Fall Treatment</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Surgeries</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Breast</a>
+									</li>
+									<li>
+										<a href="#">Nose Shape Correction</a>
+									</li>
+									<li>
+										<a href="#">Dimple Creation</a>
+									</li>
+									<li>
+										<a href="#">Genital Surgeries</a>
+									</li>
+									<li>
+										<a href="#">G-Spot Enhancement</a>
+									</li>
+									<li>
+										<a href="#">Ear</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
 					<li class="divider-vertical"></li>
 					<li>
-						<%= link_to "Our Doctors", "#" %>
+						<a href="#">Locations</a>
+					</li>
+
+					<li class="divider-vertical"></li>
+					<li>
+						<a href="#">What&#x27;s New</a>
 					</li>
 					<li class="divider-vertical"></li>
 					<li>
-						<%= link_to "What's New", "#" %>
+						<a href="#">Our Doctors</a>
 					</li>
 					<li class="divider-vertical"></li>
 					<li>
-						<%= link_to "Locations", "#" %>
-					</li>
-					<li class="divider-vertical"></li>
-					<li>
-						<%= link_to "Testimonial", "#" %>
+						<a href="#">Testimonials</a>
 					</li>
 
 				</ul>
 				<ul class="nav pull-right">
 					<li class="divider-vertical"></li>
 
-					<% if user_signed_in? %>
 					<li>
 						<div class="btn-group">
-							<a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i>&nbsp; <%= current_user.username %> </a>
-							<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li>
-
-									<%= link_to "Profile", edit_user_registration_path %>
-								</li>
-								<li>
-									<a href="#"><i class="icon-trash"></i> Settings</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
-								</li>
-							</ul>
+							<a href="/users/sign_in" class="btn btn-small btn-primary">Sign in</a>
 						</div>
-					</li>
-
-					<% else %>
-					<li>
-						<% if !current_page?(new_user_session_path) %>
-						<div class="btn-group">
-							<%= link_to "Sign in", new_user_session_path, :class => 'btn btn-mini btn-primary' %>
-						</div>
-						<% end %>
 					</li>
 					<li>
-						<% if current_page?(new_user_session_path) %>
-						<div class="btn-group">
-							<%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-mini btn-primary' %>	
-						</div>
-						
-						<% end %>
 					</li>
-					<% end %>
 
 				</ul>
 

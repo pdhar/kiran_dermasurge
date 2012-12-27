@@ -11,7 +11,7 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
   gem 'therubyracer', '0.10.1'
-  gem 'less-rails-bootstrap', '2.0.12'
+  gem 'less-rails-bootstrap'
       
 end
 
