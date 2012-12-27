@@ -78,6 +78,13 @@ run to generate custom views: rails g devise:views
 omniauth for twitter(Add Later)
 
 
+###Heroku Issue#####
+Problem: App not found after renaming an app from the website:
+
+Solution: 
+git remote rm heroku
+git remote add heroku git@heroku.com:yourappname.git
+
 ############### Rake Commands for Database manipulation #################
 To generate a scaffold:
 rails g scaffold page name permalink:string:index content:text --skip-stylesheets
