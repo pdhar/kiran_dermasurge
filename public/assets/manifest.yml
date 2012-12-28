@@ -3,6 +3,8 @@
 1/index.jpg: 1-67e97738793a1346577df6736ce08eaf.jpg
 Copy of bgDescription.png: Copy of bgDescription-a6e0fbcf9fde42cebbf15cffb7434d90.png
 Copy of bgDescription/index.png: Copy of bgDescription-a6e0fbcf9fde42cebbf15cffb7434d90.png
+about_baner.jpg: about_baner-a9a20d0f2fd7ca0eb4521fa7cad766e4.jpg
+about_baner/index.jpg: about_baner-a9a20d0f2fd7ca0eb4521fa7cad766e4.jpg
 accordion_bg1_bw.jpg: accordion_bg1_bw-d630c29ae6c16c5dd90eefe2bc9e6593.jpg
 accordion_bg1_bw/index.jpg: accordion_bg1_bw-d630c29ae6c16c5dd90eefe2bc9e6593.jpg
 accordion_bg1_color.jpg: accordion_bg1_color-105c1d705595b2c4f7e01ae2e4dcc694.jpg
@@ -23,6 +25,14 @@ accordion_bg5_bw.jpg: accordion_bg5_bw-b61cd9ea2cfc39519b1b392e00bb6e51.jpg
 accordion_bg5_bw/index.jpg: accordion_bg5_bw-b61cd9ea2cfc39519b1b392e00bb6e51.jpg
 accordion_bg5_color.jpg: accordion_bg5_color-3dd81c176c1c94eb27ea1874e81814ad.jpg
 accordion_bg5_color/index.jpg: accordion_bg5_color-3dd81c176c1c94eb27ea1874e81814ad.jpg
+acne_1.jpg: acne_1-79a676ae1f57109684dee86eb027790b.jpg
+acne_1/index.jpg: acne_1-79a676ae1f57109684dee86eb027790b.jpg
+acne_2.jpg: acne_2-13a6abda5731b7fab59379dc0e300f87.jpg
+acne_2/index.jpg: acne_2-13a6abda5731b7fab59379dc0e300f87.jpg
+acne_3.jpg: acne_3-8fbe9eee8d141b43278a0c011d657eae.jpg
+acne_3/index.jpg: acne_3-8fbe9eee8d141b43278a0c011d657eae.jpg
+acne_banner.jpg: acne_banner-b35066669e928e211f998460cfcddbfb.jpg
+acne_banner/index.jpg: acne_banner-b35066669e928e211f998460cfcddbfb.jpg
 bgDescription.png: bgDescription-496449663633d21718aefeefdf04cc3c.png
 bgDescription/index.png: bgDescription-496449663633d21718aefeefdf04cc3c.png
 favicon.ico: favicon-316216664b26769db355463df4979aef.ico
@@ -47,10 +57,10 @@ skin_color.jpg: skin_color-b67cdfa51b858b31cce8324788e696a0.jpg
 skin_color/index.jpg: skin_color-b67cdfa51b858b31cce8324788e696a0.jpg
 application.js: application-38dbd5faa71283b0de4f9381c3fb2841.js
 application/index.js: application-38dbd5faa71283b0de4f9381c3fb2841.js
-application.css: application-8303834cd57d966558cec219e8ad73c1.css
-application/index.css: application-8303834cd57d966558cec219e8ad73c1.css
-full_control.css: full_control-ade461d64e37507dd6607e666d703558.css
-full_control/index.css: full_control-ade461d64e37507dd6607e666d703558.css
+application.css: application-cc9397f029dedca05fd03e28c75eb8c5.css
+application/index.css: application-cc9397f029dedca05fd03e28c75eb8c5.css
+full_control.css: full_control-4e359bad0d86b453038d845941486e9b.css
+full_control/index.css: full_control-4e359bad0d86b453038d845941486e9b.css
 twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 twitter/bootstrap/glyphicons-halflings-white/index.png: twitter/bootstrap/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png

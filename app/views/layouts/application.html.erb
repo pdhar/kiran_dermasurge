@@ -9,6 +9,7 @@
 		<%= render 'layouts/shim' %>
 	</head>
 	<body>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,100' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
 		<div id="fb-root"></div>
 		<script>
@@ -31,7 +32,10 @@
 			</div>
 
 			<% end %>
-
+			
+			
+          	<%= render 'layouts/locations' %>
+          
 			<!--div class="modal hide fade in" data-backdrop="static" id="RegistrationEditModal">
 			<div class="modal-header">
 			<a class="close" data-dismiss="modal">×</a>
@@ -52,7 +56,7 @@
 
 			<%= debug(params) if Rails.env.development? %>
 		</div>
-
+	
 		<div style="background-color: rgba(92,92,158,0.95)" class="navbar navbar-fixed-bottom">
 			<div class="container">
 				<%= render 'layouts/footer' %>

@@ -12,7 +12,8 @@ KiranDermasurge::Application.routes.draw do
   resources :users
   
   
-  match '/help', to: 'static_pages#help'
+  match '/about', to: 'static_pages#about'
+  match '/acne_treatment', to: 'static_pages#acne_treatment'
   
   
   # The priority is based upon order of creation:
