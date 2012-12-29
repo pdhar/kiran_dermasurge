@@ -8,4 +8,12 @@ class StaticPagesController < ApplicationController
   def acne_treatment
   end
   
+  def scar_revision
+  end
+  
+  def peels
+  end
+  
+  def botox
+  end
 end

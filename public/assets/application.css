@@ -1030,7 +1030,14 @@ input{height:auto !important;}
 .users{list-style:none;margin:0;}.users li{overflow:auto;padding:10px 0;border-top:1px solid $grayLighter;}.users li:last-child{border-bottom:1px solid $grayLighter;}
 .debug_dump{clear:both;float:left;width:100%;margin-top:45px;}@include box_sizing;
 .modal.large{width:780px;margin-left:-390px;}
-div.insetBgd{width:100%;height:200px;background:-moz-linear-gradient(-90deg, #003471, #448ccb);background:-webkit-gradient(linear, left top, left bottom, from(#003471), to(#448ccb));background-image:url('acne_banner.jpg');}
+div.insetBgd{width:100%;height:200px;background:-moz-linear-gradient(-90deg, #003471, #448ccb);background:-webkit-gradient(linear, left top, left bottom, from(#003471), to(#448ccb));}
+div.acne_banner{background-image:url('acne_banner.jpg');}
+div.scar_banner{background-image:url('scar_removal_banner.jpg');}
+div.microderma_banner{background-image:url('micro_derma_banner.jpg');}
+div.peels_banner{background-image:url('peels_banner.jpg');}
+div.pfacial_banner{background-image:url('pfacial_banner.jpg');}
+div.moles_banner{background-image:url('moles_banner.jpg');}
+div.botox_banner{background-image:url('botox_banner.jpg');}
 .hero-unit h1.insetType{font-family:'Josefin Sans',sans-serif;font-size:30px;font-style:normal;text-align:left;text-shadow:rgba(0, 0, 0, 0.1) -1px 0,rgba(0, 0, 0, 0.1) 0 -1px,rgba(255, 255, 255, 0.1) 0 1px,rgba(0, 0, 0, 0.1) -1px -1px;opacity:0.8;padding-left:50px;padding-top:17px;}
 .hero-unit h1.inset_top{color:#5c5c9e;}
 .hero-unit h1.inset_bottom{color:#00c8c4;}

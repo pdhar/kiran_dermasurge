@@ -14,7 +14,12 @@ KiranDermasurge::Application.routes.draw do
   
   match '/about', to: 'static_pages#about'
   match '/acne_treatment', to: 'static_pages#acne_treatment'
-  
+  match '/scar_revision', to: 'static_pages#scar_revision'
+  match '/micro_derma', to: 'static_pages#micro_derma'
+  match '/peels', to: 'static_pages#peels'
+  match '/photo_facial', to: 'static_pages#photo_facial'
+  match '/mole_remove', to: 'static_pages#mole_remove'
+  match '/botox', to: 'static_pages#botox'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
