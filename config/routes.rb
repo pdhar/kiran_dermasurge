@@ -20,7 +20,10 @@ KiranDermasurge::Application.routes.draw do
   match '/photo_facial', to: 'static_pages#photo_facial'
   match '/mole_remove', to: 'static_pages#mole_remove'
   match '/botox', to: 'static_pages#botox'
-  
+  match '/facelift', to: 'static_pages#facelift'
+  match '/laser_reface', to: 'static_pages#laser_reface'
+  match '/body_shaping', to: 'static_pages#body_shaping'
+  match '/mesotherapy', to: 'static_pages#mesotherapy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
