@@ -24,6 +24,12 @@ KiranDermasurge::Application.routes.draw do
   match '/laser_reface', to: 'static_pages#laser_reface'
   match '/body_shaping', to: 'static_pages#body_shaping'
   match '/mesotherapy', to: 'static_pages#mesotherapy'
+  match '/vitiligo_surgical', to: 'static_pages#vitiligo_surgical'
+  match '/vitiligo_medical', to: 'static_pages#vitiligo_medical'
+  match '/hair_reduction', to: 'static_pages#hair_reduction'
+  match '/hair_transplant', to: 'static_pages#hair_transplant'
+  match '/hair_fall', to: 'static_pages#hair_fall'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

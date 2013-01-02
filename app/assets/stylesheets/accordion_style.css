@@ -1,155 +1,173 @@
-ul.accordion{
-    list-style:none;   
-    position:relative;
-    right:0px;
-    top:0px;
-    font-family: Cambria, serif;
-    font-size: 16px;
-    font-style: italic;
-    line-height: 1.5em;
+ul.accordion {
+	list-style: none;
+	position: relative;
+	right: 0px;
+	top: 0px;
+	font-family: Cambria, serif;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 1.5em;
 }
-ul.accordion li{
-    float:left;
-    width:175px;
-    height:300px;
-    display:block;
-    border-right:2px solid #fff;
-    border-bottom:2px solid #fff;
-    background-color:#fff;
-    background-repeat:no-repeat;
-    background-position: 28% 20%;
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-    -moz-box-shadow:1px 3px 15px #555;
-    -webkit-box-shadow:1px 3px 15px #555;
-    box-shadow:1px 3px 15px #555;
+ul.accordion li {
+	float: left;
+	width: 175px;
+	height: 300px;
+	display: block;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: 28% 20%;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	-moz-box-shadow: 1px 3px 15px #555;
+	-webkit-box-shadow: 1px 3px 15px #555;
+	box-shadow: 1px 3px 15px #555;
 }
-ul.accordion li.bg1{
-    background-image:url('accordion_bg1_bw.jpg');
+ul.accordion li.bg1 {
+	background-image: url('accordion_bg1_bw.jpg');
 }
-ul.accordion li.bg2{
-    background-image:url('accordion_bg2_bw.jpg');
-    
+ul.accordion li.bg2 {
+	background-image: url('accordion_bg2_bw.jpg');
 }
-ul.accordion li.bg3{
-    background-image:url('accordion_bg3_bw.jpg');
+ul.accordion li.bg3 {
+	background-image: url('accordion_bg3_bw.jpg');
 }
-ul.accordion li.bg4{
-    background-image:url('accordion_bg4_bw.jpg');
+ul.accordion li.bg4 {
+	background-image: url('accordion_bg4_bw.jpg');
 }
-ul.accordion li.bg5{
-    background-image:url('accordion_bg5_bw.jpg');
+ul.accordion li.bg5 {
+	background-image: url('accordion_bg5_bw.jpg');
 }
-ul.accordion li.bleft{
-    border-left:2px solid #fff;
+ul.accordion li.bleft {
+	border-left: 2px solid #fff;
 }
-ul.accordion li .heading{
-    background-color:#fff;
-    padding:10px;
-    margin-top:70px;
-    opacity:0.7;
-    
-    text-transform:uppercase;
-    font-style:normal;
-    font-weight:bold;
-    letter-spacing:1px;
-    font-size:14px;
-    color:#444;
-    text-align:center;
-    text-shadow:-1px -1px 1px #ccc;
+ul.accordion li .heading {
+	
+	padding: 10px;
+	margin-top: 70px;
+	opacity: 0.8;
+	position: absolute;
+	width: 100%;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	text-shadow: -1px -1px 1px #ccc;
+	border-top: 2px solid #8a8a8a;
+	border-left: 2px solid #8a8a8a;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	z-index: 6;
 }
-ul.accordion li .description{
-    position:absolute;
-    width:480px;
-    height:175px;
-    bottom:0px;
-    left:0px;
-    display:none;
-}
-ul.accordion li .description h2{
-    text-transform:uppercase;
-    font-style:normal;
-    font-weight:bold;
-    letter-spacing:1px;
-    font-size:22px;
-    color:#444;
-    text-align:left;
-    margin:80px 0px 0px 20px;
-    text-shadow:-1px -1px 1px #ccc;
-}
-ul.accordion li .description p{
-    line-height:14px;
-    margin:1px 22px 12px;
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 10px;
-    font-style: italic;
-    font-weight: normal;
-    text-transform: none;
-    letter-spacing: normal;
-    line-height: 1.6em;
-}
-ul.accordion li .description a{
-    position:absolute;
-    bottom:5px;
-    left:20px;
-    text-transform:uppercase;
-    font-style:normal;
-    font-size:11px;
-    text-decoration:none;
-    color:#888;
-}
-ul.accordion li .description a:hover{
-    color:#333;
-    text-decoration:underline;
+ul.accordion li .color_red {
+	background-color: #C21737;/*#fff;*/
 }
 
-ul.accordion li .bgDescription{
-    background:transparent url('bgDescription.png') repeat-x top left;
-    height:340px;
-    position:absolute;
-    bottom:0px;
-    left:0px;
-    width:100%;
-    display:none;
+ul.accordion li .color_gold {
+	background-color: #D18E19;
+}
+
+ul.accordion li .color_blue {
+	background-color: #377DDE;
+}
+
+ul.accordion li .color_purple {
+	background-color: #9E268C;
+}
+
+ul.accordion li .color_green {
+	background-color: #3EA361;
 }
 
 
-
-ul.accordion li .bgImage{
-    
-    float:left;
-    width: 175px;
-    height:300px;
-    background-color:#fff;
-    background-repeat:no-repeat;
-    
-    background-position: absolute;
-    overflow:hidden;
-    cursor:pointer;
-    bottom:0px;
-    left:0px;
-    width:100%;
-    display:none;
+ul.accordion li .description {
+	position: absolute;
+	width: 480px;
+	height: 175px;
+	bottom: 0px;
+	left: 0px;
+	display: none;
+}
+ul.accordion li .description h2 {
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 22px;
+	color: #444;
+	text-align: left;
+	margin: 80px 0px 0px 20px;
+	text-shadow: -1px -1px 1px #ccc;
+}
+ul.accordion li .description p {
+	line-height: 14px;
+	margin: 1px 22px 12px;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: normal;
+	line-height: 1.6em;
+}
+ul.accordion li .description a {
+	position: absolute;
+	bottom: 5px;
+	left: 20px;
+	text-transform: uppercase;
+	font-style: normal;
+	font-size: 11px;
+	text-decoration: none;
+	color: #888;
+}
+ul.accordion li .description a:hover {
+	color: #333;
+	text-decoration: underline;
 }
 
-ul.accordion li .bg_color1{
-	background:transparent url('accordion_bg1_color.jpg');
-	
+ul.accordion li .bgDescription {
+	background: transparent url('bgDescription.png') repeat-x top left;
+	height: 340px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	display: none;
 }
-ul.accordion li .bg_color2{
-	background:transparent url('accordion_bg2_color.jpg');
-	
+
+ul.accordion li .bgImage {
+
+	float: left;
+	width: 175px;
+	height: 300px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	display: none;
 }
-ul.accordion li .bg_color3{
-	background:transparent url('accordion_bg3_color.jpg');
-	
+
+ul.accordion li .bg_color1 {
+	background: transparent url('accordion_bg1_color.jpg');
 }
-ul.accordion li .bg_color4{
-	background:transparent url('accordion_bg4_color.jpg');
-	
+ul.accordion li .bg_color2 {
+	background: transparent url('accordion_bg2_color.jpg');
 }
-ul.accordion li .bg_color5{
-	background:transparent url('accordion_bg5_color.jpg');
-	
+ul.accordion li .bg_color3 {
+	background: transparent url('accordion_bg3_color.jpg');
+}
+ul.accordion li .bg_color4 {
+	background: transparent url('accordion_bg4_color.jpg');
+}
+ul.accordion li .bg_color5 {
+	background: transparent url('accordion_bg5_color.jpg');
 }

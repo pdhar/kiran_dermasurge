@@ -4,13 +4,15 @@
 		<td>
 		<ul class="accordion" id="accordion">
 			<li class="bg1">
+				
+				
+				
 				<div class="bgImage bg_color1"></div>
-				<div class="heading">
+				<div class="heading color_red">
 					Skin
 					<br/>
 					Rejuvenation
 				</div>
-
 				<div class="bgDescription"></div>
 				<div class="description">
 					<h2>Skin Rejuvenation</h2>
@@ -21,10 +23,12 @@
 					</p>
 					<a href="#">more &rarr;</a>
 				</div>
+				
+				
 			</li>
 			<li class="bg2">
 				<div class="bgImage bg_color2"></div>
-				<div class="heading">
+				<div class="heading color_gold">
 					Hair
 					<br/>
 					Reduction
@@ -43,7 +47,7 @@
 			</li>
 			<li class="bg3">
 				<div class="bgImage bg_color3"></div>
-				<div class="heading">
+				<div class="heading color_blue">
 					Vitiligo
 					<br/>
 					&nbsp;
@@ -62,10 +66,10 @@
 			</li>
 			<li class="bg4 bleft">
 				<div class="bgImage bg_color4"></div>
-				<div class="heading">
-					Anti Aging
+				<div class="heading color_purple">
+					Anti 
 					<br/>
-					&nbsp;
+					Aging&nbsp;
 				</div>
 				<div class="bgDescription"></div>
 				<div class="description">
@@ -81,7 +85,7 @@
 			</li>
 			<li class="bg5 bleft">
 				<div class="bgImage bg_color5"></div>
-				<div class="heading">
+				<div class="heading color_green">
 					Body
 					<br/>
 					Shaping
@@ -141,9 +145,10 @@
 			$this.stop().animate({
 				'width' : '480px'
 			}, 450);
-
-			$('.bgImage', $this).stop(true, true).fadeIn(2100);
-			$('.heading', $this).stop(true, true).fadeOut(400);
+			
+			$('.heading', $this).stop(true, true).slideUp(400);
+			$('.bgImage', $this).stop(true, true).fadeIn(1500);
+			
 			$('.bgDescription', $this).stop(true, true).slideDown(500);
 			$('.description', $this).stop(true, true).fadeIn();
 
@@ -158,8 +163,8 @@
 
 			$('.bgImage', $this).stop(true, true).fadeOut(100);
 			$('.description', $this).stop(true, true).fadeOut(500);
-			$('.bgDescription', $this).stop(true, true).slideUp(700);
-			$('.heading', $this).stop(true, true).fadeIn(700);
+			$('.bgDescription', $this).stop(true, true).slideUp(500);
+			$('.heading', $this).stop(true, true).slideDown(500);
 
 			$this.siblings().stop().animate({
 				'width' : '175px'
