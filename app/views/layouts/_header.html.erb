@@ -39,10 +39,10 @@
 								<a href="#">Anti Aging</a>
 								<ul class="dropdown-menu">
 									<li>
-										<%= link_to "Botox / Filler", botox_path %>	
+										<%= link_to "Botox / Filler", botox_path %>
 									</li>
 									<li>
-										<%= link_to "Face Lift", facelift_path %>	
+										<%= link_to "Face Lift", facelift_path %>
 									</li>
 									<li>
 										<%= link_to "Laser Resurfacing", laser_reface_path %>
@@ -60,7 +60,7 @@
 										<%= link_to "Mesotherapy", mesotherapy_path %>
 									</li>
 									<!--li>
-										<a href="#">Liposuction</a> Doesn't Exist Yet!!!
+									<a href="#">Liposuction</a> Doesn't Exist Yet!!!
 									</li-->
 								</ul>
 							</li>
@@ -95,16 +95,16 @@
 								<a href="#">Surgeries</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a href="#">Breast</a>
+										<%= link_to "Breast", breast_shaping_path %>
 									</li>
 									<li>
-										<a href="#">Nose Shape Correction</a>
+										<%= link_to "Nose Shape Correction", nose_shape_path %>
 									</li>
 									<li>
-										<a href="#">Dimple Creation</a>
+										<%= link_to "Dimple Creation", dimple_creation_path %>
 									</li>
 									<li>
-										<a href="#">Genital Surgeries</a>
+										<%= link_to "Genital Surgeries", genitalia_path %>
 									</li>
 									<li>
 										<a href="#">G-Spot Enhancement</a>
@@ -138,13 +138,49 @@
 				<ul class="nav pull-right">
 					<li class="divider-vertical"></li>
 
+					<!--li>
+					<div class="btn-group">
+					<a href="/users/sign_in" class="btn btn-small btn-primary">Sign in</a>
+					</div>
+					</li-->
+					<% if user_signed_in? %>
 					<li>
 						<div class="btn-group">
-							<a href="/users/sign_in" class="btn btn-small btn-primary">Sign in</a>
+							<a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i>&nbsp; <%= current_user.username %> </a>
+							<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+
+									<%= link_to "Profile", edit_user_registration_path %>
+								</li>
+								<li>
+									<a href="#"><i class="icon-trash"></i> Settings</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+								</li>
+							</ul>
 						</div>
 					</li>
+
+					<% else %>
 					<li>
+						<% if !current_page?(new_user_session_path) %>
+						<div class="btn-group">
+							<%= link_to "Sign in", new_user_session_path, :class => 'btn btn-primary' %>
+						</div>
+						<% end %>
 					</li>
+					<li>
+						<% if current_page?(new_user_session_path) %>
+						<div class="btn-group">
+							<%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-primary' %>
+						</div>
+
+						<% end %>
+					</li>
+					<% end %>
 
 				</ul>
 
@@ -153,10 +189,10 @@
 	</div>
 
 	<script type="text/javascript">
-		//Required to initialize the dropdown menu
-		$(function() {
-			$('.dropdown-toggle').dropdown();
-		});
+//Required to initialize the dropdown menu
+$(function() {
+$('.dropdown-toggle').dropdown();
+});
 	</script>
 
 </header>

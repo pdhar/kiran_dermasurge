@@ -29,6 +29,10 @@ KiranDermasurge::Application.routes.draw do
   match '/hair_reduction', to: 'static_pages#hair_reduction'
   match '/hair_transplant', to: 'static_pages#hair_transplant'
   match '/hair_fall', to: 'static_pages#hair_fall'
+  match '/breast_shaping', to: 'static_pages#breast_shaping'
+  match '/nose_shape', to: 'static_pages#nose_shape'
+  match '/dimple_creation', to: 'static_pages#dimple_creation'
+  match '/genitalia', to: 'static_pages#genitalia'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
