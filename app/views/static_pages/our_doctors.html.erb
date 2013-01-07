@@ -6,26 +6,53 @@
 <div class="row">
 
 	<span class="span6">
-		<div class="box effect8">
+		<div class="box effect8" >
 			<h3>Dr. Kiran Dhar</h3>
-			
+			<br />
 			<section id="topBlock">
-				
+
 				<section class="doctor_pic">
-					
+
 					<%= image_tag("doctors/doct_kiran.jpg", alt: "Rails", border: "0") %>
 				</section>
-				
-				<section>
-					asdaskldj aslkdjaslkjdl aksdjla skjd dsalkdj alsd askdjasldj
+
+				<section class="doctor_description">
+					<p>
+						<strong>Dr. Kiran Dhar</strong> is an experienced dermatologist motivated 
+						by her motto of honesty, integrity and service in medical practice. Currently, 
+						she is practicing in Dubai after building her reputation as a skin specialist and a cosmetic practitioner.
+					</p>
+					<a class="btn btn-small btn-primary" data-toggle="modal" href="#dr_kiran">Know More</a>
 				</section>
 			</section>
-		</div> </span>
+		</div> 
+	</span>
 
 	<span class="span6">
-		<div class="box effect8">
-			<h3>Dr. Kiran Dhar</h3>
-		</div> </span>
+		<div class="box effect8" >
+			<h3>Dr. Aditi Jha</h3>
+			<br />
+			<section id="topBlock">
 
-	
+				<section class="doctor_pic">
+
+					<%= image_tag("doctors/doct_aditi_jha.jpg", alt: "Rails", border: "0") %>
+				</section>
+
+				<section class="doctor_description">
+					<p>
+						<strong>Dr. Aditi Jha</strong> is a refined dermatologist and has to her credit the management 
+						of difficult and interesting cases in Clinical Dermatology, Venereology, Dermatosurgery, 
+						Lasers and cosmetology from the premier ...
+					</p>
+					<a class="btn btn-small btn-primary" data-toggle="modal" href="#dr_aditi_jha">Know More</a>
+				</section>
+			</section>
+		</div> 
+	</span>
+
 </div>
+
+
+<%= render 'layouts/doctors_know_more' %>
+

@@ -36,6 +36,7 @@ KiranDermasurge::Application.routes.draw do
   match '/ear', to: 'static_pages#ear'
   match '/whats_new', to: 'static_pages#whats_new'
   match '/our_doctors', to: 'static_pages#our_doctors'
+  match '/doc_schedule', to: 'static_pages#doc_schedule'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

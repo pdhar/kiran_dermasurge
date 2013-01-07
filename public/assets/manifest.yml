@@ -1,6 +1,4 @@
 ---
-1.jpg: 1-67e97738793a1346577df6736ce08eaf.jpg
-1/index.jpg: 1-67e97738793a1346577df6736ce08eaf.jpg
 Copy of bgDescription.png: Copy of bgDescription-a6e0fbcf9fde42cebbf15cffb7434d90.png
 Copy of bgDescription/index.png: Copy of bgDescription-a6e0fbcf9fde42cebbf15cffb7434d90.png
 about_baner.jpg: about_baner-a9a20d0f2fd7ca0eb4521fa7cad766e4.jpg
@@ -33,6 +31,8 @@ acne_3.jpg: acne_3-8fbe9eee8d141b43278a0c011d657eae.jpg
 acne_3/index.jpg: acne_3-8fbe9eee8d141b43278a0c011d657eae.jpg
 acne_banner.jpg: acne_banner-b35066669e928e211f998460cfcddbfb.jpg
 acne_banner/index.jpg: acne_banner-b35066669e928e211f998460cfcddbfb.jpg
+aesthetics_banner.jpg: aesthetics_banner-00c2a8b54ce59171dd5993810fe7f560.jpg
+aesthetics_banner/index.jpg: aesthetics_banner-00c2a8b54ce59171dd5993810fe7f560.jpg
 bgDescription.png: bgDescription-496449663633d21718aefeefdf04cc3c.png
 bgDescription/index.png: bgDescription-496449663633d21718aefeefdf04cc3c.png
 body_shap1.jpg: body_shap1-8b95b7a32bd17581f55923dabe908456.jpg
@@ -59,6 +59,8 @@ breast_lift3.jpg: breast_lift3-cf0630839b40d0be84caceb3f8d43e6d.jpg
 breast_lift3/index.jpg: breast_lift3-cf0630839b40d0be84caceb3f8d43e6d.jpg
 breast_shaping_banner.jpg: breast_shaping_banner-a1d7d111df1dd37a7487980f394b018d.jpg
 breast_shaping_banner/index.jpg: breast_shaping_banner-a1d7d111df1dd37a7487980f394b018d.jpg
+clock.jpg: clock-c2a7c48c6962320407fb7e1878a924e0.jpg
+clock/index.jpg: clock-c2a7c48c6962320407fb7e1878a924e0.jpg
 dermabrasion1.jpg: dermabrasion1-a3035044a7e263d48ddba60757f5bc53.jpg
 dermabrasion1/index.jpg: dermabrasion1-a3035044a7e263d48ddba60757f5bc53.jpg
 dermabrasion2.jpg: dermabrasion2-4e8f2fe8f4e12a615158642261539473.jpg
@@ -73,6 +75,10 @@ dimple_3.jpg: dimple_3-5a98687848e91a73c3099263dd0fe5b8.jpg
 dimple_3/index.jpg: dimple_3-5a98687848e91a73c3099263dd0fe5b8.jpg
 dimple_banner.jpg: dimple_banner-8ad76364c47f28b6376d48aab16ddfbd.jpg
 dimple_banner/index.jpg: dimple_banner-8ad76364c47f28b6376d48aab16ddfbd.jpg
+doctors/doct_aditi_jha.jpg: doctors/doct_aditi_jha-e331422b0cdbe2a26512089c85d33bfa.jpg
+doctors/doct_aditi_jha/index.jpg: doctors/doct_aditi_jha-e331422b0cdbe2a26512089c85d33bfa.jpg
+doctors/doct_kiran.jpg: doctors/doct_kiran-ddc9d0ce1e1c7649e40338b92738d0d1.jpg
+doctors/doct_kiran/index.jpg: doctors/doct_kiran-ddc9d0ce1e1c7649e40338b92738d0d1.jpg
 ear_banner.jpg: ear_banner-8bce817b5a0091cf8cad1bad6c7c3649.jpg
 ear_banner/index.jpg: ear_banner-8bce817b5a0091cf8cad1bad6c7c3649.jpg
 face_lift1.jpg: face_lift1-79acf2be0e23d7b66efd352c49e80f40.jpg
@@ -127,6 +133,8 @@ img_logo2.png: img_logo2-8443bc4b2b0d3ed9cef5ae41510f6034.png
 img_logo2/index.png: img_logo2-8443bc4b2b0d3ed9cef5ae41510f6034.png
 kds_logo.png: kds_logo-1889ffc2023d3cc0df98c2cf76b5a53d.png
 kds_logo/index.png: kds_logo-1889ffc2023d3cc0df98c2cf76b5a53d.png
+kds_logo_small.jpg: kds_logo_small-b6297f14131edb9a40ddb4dbc87eea79.jpg
+kds_logo_small/index.jpg: kds_logo_small-b6297f14131edb9a40ddb4dbc87eea79.jpg
 laser_banner.jpg: laser_banner-a8a5263e1bdba234e31f7047febbe048.jpg
 laser_banner/index.jpg: laser_banner-a8a5263e1bdba234e31f7047febbe048.jpg
 lasertreat1.jpg: lasertreat1-ba4edb9677c88a466b8d573cb2b602b1.jpg
@@ -157,6 +165,8 @@ nose_treat_3.jpg: nose_treat_3-3f28c17bb907a9a1bca312975eae3624.jpg
 nose_treat_3/index.jpg: nose_treat_3-3f28c17bb907a9a1bca312975eae3624.jpg
 nose_treatment_banner.jpg: nose_treatment_banner-1e7e1a060f9c06c783435f4a9c031e4b.jpg
 nose_treatment_banner/index.jpg: nose_treatment_banner-1e7e1a060f9c06c783435f4a9c031e4b.jpg
+our_doctors_banner.jpg: our_doctors_banner-5f8fd49406bdc459f52040b27d8ff4f3.jpg
+our_doctors_banner/index.jpg: our_doctors_banner-5f8fd49406bdc459f52040b27d8ff4f3.jpg
 peels1.jpg: peels1-e62dbbb5c8968649f503fce8d9c8c41d.jpg
 peels1/index.jpg: peels1-e62dbbb5c8968649f503fce8d9c8c41d.jpg
 peels2.jpg: peels2-5aacd28538b08b0be74872152fd343ba.jpg
@@ -183,6 +193,10 @@ scar_3.jpg: scar_3-cb32b5122a1d22c5063536a1366d691d.jpg
 scar_3/index.jpg: scar_3-cb32b5122a1d22c5063536a1366d691d.jpg
 scar_removal_banner.jpg: scar_removal_banner-78ee2fe931a34b0bd0d071e23d7d4651.jpg
 scar_removal_banner/index.jpg: scar_removal_banner-78ee2fe931a34b0bd0d071e23d7d4651.jpg
+schedule_banner.jpg: schedule_banner-f974d8590dd644436fc40d48edd3aa6e.jpg
+schedule_banner/index.jpg: schedule_banner-f974d8590dd644436fc40d48edd3aa6e.jpg
+shedule_banner.jpg: shedule_banner-f974d8590dd644436fc40d48edd3aa6e.jpg
+shedule_banner/index.jpg: shedule_banner-f974d8590dd644436fc40d48edd3aa6e.jpg
 sign-in-with-facebook.png: sign-in-with-facebook-0143ecef62f505deb8fe0813d3a16947.png
 sign-in-with-facebook/index.png: sign-in-with-facebook-0143ecef62f505deb8fe0813d3a16947.png
 sign-in-with-twitter-gray.png: sign-in-with-twitter-gray-6cfce5ace5f0a7831b13bb42281ef40a.png
@@ -205,8 +219,8 @@ wart3.jpg: wart3-8519cbb01064a3aa12d924f0d6aeb1de.jpg
 wart3/index.jpg: wart3-8519cbb01064a3aa12d924f0d6aeb1de.jpg
 application.js: application-38dbd5faa71283b0de4f9381c3fb2841.js
 application/index.js: application-38dbd5faa71283b0de4f9381c3fb2841.js
-application.css: application-b36aa237d6845399fa54a3b691e122dd.css
-application/index.css: application-b36aa237d6845399fa54a3b691e122dd.css
+application.css: application-f3bb9bbb59b1987c5506af0ce4c20f16.css
+application/index.css: application-f3bb9bbb59b1987c5506af0ce4c20f16.css
 full_control.css: full_control-4e359bad0d86b453038d845941486e9b.css
 full_control/index.css: full_control-4e359bad0d86b453038d845941486e9b.css
 twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
