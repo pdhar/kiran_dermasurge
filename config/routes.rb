@@ -33,6 +33,7 @@ KiranDermasurge::Application.routes.draw do
   match '/nose_shape', to: 'static_pages#nose_shape'
   match '/dimple_creation', to: 'static_pages#dimple_creation'
   match '/genitalia', to: 'static_pages#genitalia'
+  match '/ear', to: 'static_pages#ear'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
