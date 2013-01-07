@@ -34,6 +34,8 @@ KiranDermasurge::Application.routes.draw do
   match '/dimple_creation', to: 'static_pages#dimple_creation'
   match '/genitalia', to: 'static_pages#genitalia'
   match '/ear', to: 'static_pages#ear'
+  match '/whats_new', to: 'static_pages#whats_new'
+  match '/our_doctors', to: 'static_pages#our_doctors'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
