@@ -1,0 +1,15 @@
+<%= simple_form_for(@query) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="control-group">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :subject %>
+    <%= f.label "Message" %>
+    <%= f.text_area :message , :rows => 5 %>
+  </div>
+
+  <div class="controls">
+    <%= f.button :submit, :class => 'btn btn-success' %>
+  </div>
+<% end %>
