@@ -1,0 +1,6 @@
+$('#new_link').hide();
+
+$('#testimonial_container').append('<%= j render("form")%>');
+$('#testimonial_container').slideToggle();
+$('form[data-validate]').validate();
+

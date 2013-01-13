@@ -23,3 +23,5 @@ gem "rolify", ">= 3.2.0"
 gem "figaro", ">= 0.5.0"
 gem 'simple_form'
 gem 'redcarpet'
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'

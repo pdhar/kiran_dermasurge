@@ -1,0 +1,46 @@
+<div class="insetBgd testimonial_banner"></div>
+<hr />
+<br />
+
+<div class="row">
+
+	<!-- end left -->
+
+	<section class="span7" >
+		<div class="well">
+
+			<div id="testimonials">
+				<h3>Testimonials</h3>
+				<% @testimonials.each do |testimonial| %>
+				<blockquote class="testimonial">
+					<p>
+						<%= testimonial.message %>
+					</p>
+				</blockquote>
+				<div class="arrow-down"></div>
+				<p class="testimonial-author">
+					<%= testimonial.name %> | <span><%= mail_to testimonial.email %></span>
+					| <span><td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td></span> | <span><td><%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %></td></span>
+				</p>
+				<br />
+				<% end %>
+			</div>
+		</div><!--end well -->
+	</section><!--end right -->
+	
+	<section class="span5" style='text-align: center;'>
+		<br />
+
+		<br />
+
+		<%= link_to 'Write a Testimonial ?', new_testimonial_path, id: "new_link", :remote => true, :class => 'btn btn-large btn-primary' %>
+
+		<div id="testimonial_container" style='display: none; border-style:solid; border-width:1px; border-color: #5c5c9e'>
+
+		</div>
+
+		<br class="clear">
+
+	</section>
+</div>
+

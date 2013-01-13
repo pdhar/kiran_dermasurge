@@ -1,15 +1,23 @@
-<%= simple_form_for(@query) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for(@query, :validate => true) do |f| %>
+  
+<%= f.error_notification %>
 
-  <div class="control-group">
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :subject %>
-    <%= f.label "Message" %>
-    <%= f.text_area :message , :rows => 5 %>
+
+<div class="form-inputs">
+    <%= f.input :name, :placeholder => 'Please Enter Full Name'  %>
+    <%= f.input :email, :placeholder => 'Please Enter your Email ID' %>
+    
+    <%= f.input :subject, :placeholder => 'Subject of your Query?' %>
+    <%= f.input :message, :as => :text, :input_html => { :rows => 3 }, :placeholder => 'Please Enter your Query.' %>
   </div>
 
-  <div class="controls">
-    <%= f.button :submit, :class => 'btn btn-success' %>
+  <div class="form-actions">
+    <%= f.button :submit, 'Send Message', :class => 'btn btn-success' %>
   </div>
+  
+  
+   
+  
+ 
+  
 <% end %>

@@ -93,5 +93,30 @@ To generate a scaffold:
 rails g scaffold page name permalink:string:index content:text --skip-stylesheets
 
 
+### TEMP ####
 
+
+<div class="control-group">
+  	<div class="form-inputs">
+  	
+  	<label class="control-label" for="inputEmail"><i class="icon-user"></i> Full Name</label>
+    <%= f.text_field :name, :placeholder => 'Please Enter Full Name' %>
+     <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
+    <%= f.text_field :email, :placeholder => 'Please Enter your Email ID' %>
+    
+    <label class="control-label" for="inputEmail"><i class="icon-question-sign"></i> Subject</label>
+    <%= f.text_field :subject, :placeholder => 'Subject of your Query?' %>
+    
+    <label class="control-label" for="inputEmail"><i class="icon-pencil"></i> Message</label>
+    <%= f.text_area :message , :rows => 5, :placeholder => 'Please Enter your Query.' %>
+    </div>
+    
+    
+    
+  
+  </div>
+
+  <div class="controls">
+    <%= f.button :submit, 'Send Message', :class => 'btn btn-success' %>
+  </div>
 
