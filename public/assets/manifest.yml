@@ -207,6 +207,8 @@ sign-in-with-twitter-gray.png: sign-in-with-twitter-gray-6cfce5ace5f0a7831b13bb4
 sign-in-with-twitter-gray/index.png: sign-in-with-twitter-gray-6cfce5ace5f0a7831b13bb42281ef40a.png
 skin_color.jpg: skin_color-b67cdfa51b858b31cce8324788e696a0.jpg
 skin_color/index.jpg: skin_color-b67cdfa51b858b31cce8324788e696a0.jpg
+testimonial_banner.jpg: testimonial_banner-5affbb83e07af981be007cdb59048a82.jpg
+testimonial_banner/index.jpg: testimonial_banner-5affbb83e07af981be007cdb59048a82.jpg
 twitter.png: twitter-4e699ee55ef01a9fab7988c066238d4e.png
 twitter/index.png: twitter-4e699ee55ef01a9fab7988c066238d4e.png
 vitiligo_banner.jpg: vitiligo_banner-f829e886d271c5ac26d9ad77f2c6b8f7.jpg
@@ -223,10 +225,12 @@ wart2.jpg: wart2-b3d68afe05044459b7257112673316d9.jpg
 wart2/index.jpg: wart2-b3d68afe05044459b7257112673316d9.jpg
 wart3.jpg: wart3-8519cbb01064a3aa12d924f0d6aeb1de.jpg
 wart3/index.jpg: wart3-8519cbb01064a3aa12d924f0d6aeb1de.jpg
-application.js: application-2311b4bb60acf086311f39bfdc041edc.js
-application/index.js: application-2311b4bb60acf086311f39bfdc041edc.js
-application.css: application-f1a09595546861abfcb2ed20a6fcdadd.css
-application/index.css: application-f1a09595546861abfcb2ed20a6fcdadd.css
+application.js: application-81e107f35457bf9d68ab4be66ac56af3.js
+application/index.js: application-81e107f35457bf9d68ab4be66ac56af3.js
+rails.validations.js: rails.validations-644aa92a400231b4b271be1de8d2d8fd.js
+rails/index.validations.js: rails.validations-644aa92a400231b4b271be1de8d2d8fd.js
+application.css: application-74b2ffb5de47bf5ef212fc6ff446d0a4.css
+application/index.css: application-74b2ffb5de47bf5ef212fc6ff446d0a4.css
 full_control.css: full_control-4e359bad0d86b453038d845941486e9b.css
 full_control/index.css: full_control-4e359bad0d86b453038d845941486e9b.css
 twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
