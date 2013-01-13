@@ -79,8 +79,16 @@ dimple_banner.jpg: dimple_banner-8ad76364c47f28b6376d48aab16ddfbd.jpg
 dimple_banner/index.jpg: dimple_banner-8ad76364c47f28b6376d48aab16ddfbd.jpg
 doctors/doct_aditi_jha.jpg: doctors/doct_aditi_jha-e331422b0cdbe2a26512089c85d33bfa.jpg
 doctors/doct_aditi_jha/index.jpg: doctors/doct_aditi_jha-e331422b0cdbe2a26512089c85d33bfa.jpg
+doctors/doct_chanchal.jpg: doctors/doct_chanchal-816e76dc5527f8e65f60c283a5e66e8a.jpg
+doctors/doct_chanchal/index.jpg: doctors/doct_chanchal-816e76dc5527f8e65f60c283a5e66e8a.jpg
 doctors/doct_kiran.jpg: doctors/doct_kiran-ddc9d0ce1e1c7649e40338b92738d0d1.jpg
 doctors/doct_kiran/index.jpg: doctors/doct_kiran-ddc9d0ce1e1c7649e40338b92738d0d1.jpg
+doctors/doct_naresh.jpg: doctors/doct_naresh-95a527e7eba473eaf86fb49522d19f8c.jpg
+doctors/doct_naresh/index.jpg: doctors/doct_naresh-95a527e7eba473eaf86fb49522d19f8c.jpg
+doctors/doct_neha.jpg: doctors/doct_neha-ca7f080d0bb5f561439ec1e7252f558c.jpg
+doctors/doct_neha/index.jpg: doctors/doct_neha-ca7f080d0bb5f561439ec1e7252f558c.jpg
+doctors/doct_sheilly.jpg: doctors/doct_sheilly-718eff0b85d80f6208c33db5aad5942e.jpg
+doctors/doct_sheilly/index.jpg: doctors/doct_sheilly-718eff0b85d80f6208c33db5aad5942e.jpg
 ear_banner.jpg: ear_banner-8bce817b5a0091cf8cad1bad6c7c3649.jpg
 ear_banner/index.jpg: ear_banner-8bce817b5a0091cf8cad1bad6c7c3649.jpg
 face_lift1.jpg: face_lift1-79acf2be0e23d7b66efd352c49e80f40.jpg
@@ -229,6 +237,8 @@ application.js: application-81e107f35457bf9d68ab4be66ac56af3.js
 application/index.js: application-81e107f35457bf9d68ab4be66ac56af3.js
 rails.validations.js: rails.validations-644aa92a400231b4b271be1de8d2d8fd.js
 rails/index.validations.js: rails.validations-644aa92a400231b4b271be1de8d2d8fd.js
+rails.validations.simple_form.js: rails.validations.simple_form-d76ed0d4c3cebe923d40539332288398.js
+rails/index.validations.simple_form.js: rails.validations.simple_form-d76ed0d4c3cebe923d40539332288398.js
 application.css: application-74b2ffb5de47bf5ef212fc6ff446d0a4.css
 application/index.css: application-74b2ffb5de47bf5ef212fc6ff446d0a4.css
 full_control.css: full_control-4e359bad0d86b453038d845941486e9b.css
