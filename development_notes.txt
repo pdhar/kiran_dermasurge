@@ -94,7 +94,7 @@ rails g scaffold page name permalink:string:index content:text --skip-stylesheet
 
 
 ### TEMP ####
-
+asd
 
 <div class="control-group">
   	<div class="form-inputs">
