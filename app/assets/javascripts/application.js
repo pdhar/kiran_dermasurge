@@ -12,8 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.core
+//= require jquery.ui.widget
+//= require jquery.ui.effect
+
 //= require twitter/bootstrap
 //= require rails.validations
 //= require rails.validations.simple_form
-//= require_tree .
+//= require faye.chat.js
+//= require jquery.ui.chatbox
+
+
+
+
 
