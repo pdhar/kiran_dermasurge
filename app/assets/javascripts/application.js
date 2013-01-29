@@ -21,7 +21,7 @@
 //= require rails.validations.simple_form
 //= require faye.chat.js
 //= require jquery.ui.chatbox
-
+//= require jquery.sticky
 
 
 

@@ -238,6 +238,9 @@
                 'ui-corner-all'
             )
             .appendTo(uiChatboxInput)
+            
+            
+            
             .keydown(function(event) {
                 if(event.keyCode && event.keyCode == $.ui.keyCode.ENTER) {
                     msg = $.trim($(this).val());

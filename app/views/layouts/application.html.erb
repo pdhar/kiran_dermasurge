@@ -47,15 +47,33 @@
 					}
 				});
 			});
+			$(window).load(function() {
+				$("#sticker").sticky({
+					topSpacing : 70
+				});
+			});
 		</script>
 	</head>
 	<body>
-		
+
 		<div id="fb-root"></div>
 
 		<%= render 'layouts/header' %>
 
+		<!--div id="wrapper">
+		<div id="sticker">
+		<p>Live Chat</p>
+		</div>
+		</div-->
+
+		<div id="wrapper" >
+			<div id="sticker">
+				<a id="chatbutton" href="#"> Live Chat </a>
+
+			</div>
+		</div>
 		<div class="container">
+
 			<% flash.each do |key, value| %>
 			<div class="alert alert-<%= key %>">
 				<%= value %>
@@ -87,18 +105,18 @@
 				It will not work untill necessary scripts and stylesheets are
 				properly loaded, check out the code.
 			</p>
-			<input id="chatbutton" type="button"
-			name="toggle" value="toggle" />
+			<!--input id="chatbutton" type="button"
+			name="toggle" value="toggle" /-->
 			<div style="display: none">
 
 				<div id="chat_div" style="width: 250px;"></div>
 				<hr />
 				<div id="log"></div>
 			</div>
-			
-			<input id="test_chat" type="button"
-			name="test_chat" value="test_chat" />
-			
+
+			<!--input id="test_chat" type="button"
+			name="test_chat" value="test_chat" /-->
+
 			<%= debug(params) if Rails.env.development? %>
 		</div>
 
