@@ -33,7 +33,7 @@ $(function() {
 	
 	//var publication = client.publish('/messages/new', {channel:'/messages/new',data:'hello from chatbox',ext:{auth_token:'anything'}});
 	subscription.callback(function() {
-	  alert('Subscription is now active!');
+	  //alert('Subscription is now active!');
 	});
 	
 	subscription.errback(function(error) {
