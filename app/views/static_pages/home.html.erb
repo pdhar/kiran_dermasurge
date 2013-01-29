@@ -1,107 +1,107 @@
 <br />
-
-		<ul class="accordion" id="accordion">
-			<li class="bg1">
-				
-				<div class="bgImage bg_color1"></div>
-				<div class="heading color_red">
-					Skin
-					<br/>
-					Rejuvenation
-				</div>
-				<div class="bgDescription"></div>
-				<div class="description">
-					<h2>Skin Rejuvenation</h2>
-					<p>
-						Offering; Acne treatment, Peeling, Stretch Marks,
+<table>
+	<tr>
+		<td>
+			<ul class="accordion" id="accordion">
+				<li class="bg1">
+	
+					<div class="bgImage bg_color1"></div>
+					<div class="heading color_red">
+						Skin
 						<br/>
-						Scar revision, Skin Imperfection
-					</p>
-					<%= link_to 'more&rarr;'.html_safe ,acne_treatment_path %>
-				</div>
-				
-				
-			</li>
-			<li class="bg2">
-				<div class="bgImage bg_color2"></div>
-				<div class="heading color_gold">
-					Hair
-					<br/>
-					Reduction
-				</div>
-				<div class="bgDescription"></div>
-				<div class="description">
-					<h2>Hair Reduction</h2>
-					<p>
-						This noninvasive laser treatment uses gentle
+						Rejuvenation
+					</div>
+					<div class="bgDescription"></div>
+					<div class="description">
+						<h2>Skin Rejuvenation</h2>
+						<p>
+							Offering; Acne treatment, Peeling, Stretch Marks,
+							<br/>
+							Scar revision, Skin Imperfection
+						</p>
+						<%= link_to 'more&rarr;'.html_safe ,acne_treatment_path %>
+					</div>
+	
+				</li>
+				<li class="bg2">
+					<div class="bgImage bg_color2"></div>
+					<div class="heading color_gold">
+						Hair
 						<br/>
-						beams of light to get rid of hair.
-					</p>
-					<%= link_to 'more&rarr;'.html_safe ,hair_reduction_path %>
-				</div>
-
-			</li>
-			<li class="bg3">
-				<div class="bgImage bg_color3"></div>
-				<div class="heading color_blue">
-					Vitiligo
-					<br/>
-					&nbsp;
-				</div>
-				<div class="bgDescription"></div>
-				<div class="description">
-					<h2>Vitiligo</h2>
-					<p>
-						Our advanced Vitiligo treatment with UVB
+						Reduction
+					</div>
+					<div class="bgDescription"></div>
+					<div class="description">
+						<h2>Hair Reduction</h2>
+						<p>
+							This noninvasive laser treatment uses gentle
+							<br/>
+							beams of light to get rid of hair.
+						</p>
+						<%= link_to 'more&rarr;'.html_safe ,hair_reduction_path %>
+					</div>
+	
+				</li>
+				<li class="bg3">
+					<div class="bgImage bg_color3"></div>
+					<div class="heading color_blue">
+						Vitiligo
 						<br/>
-						technology uses a carefully.
-					</p>
-					<%= link_to 'more&rarr;'.html_safe ,vitiligo_surgical_path %>
-				</div>
-
-			</li>
-			<li class="bg4 bleft">
-				<div class="bgImage bg_color4"></div>
-				<div class="heading color_purple">
-					Anti 
-					<br/>
-					Aging&nbsp;
-				</div>
-				<div class="bgDescription"></div>
-				<div class="description">
-					<h2>Anti Aging</h2>
-					<p>
-						The clock is ticking and as we age our skin
+						&nbsp;
+					</div>
+					<div class="bgDescription"></div>
+					<div class="description">
+						<h2>Vitiligo</h2>
+						<p>
+							Our advanced Vitiligo treatment with UVB
+							<br/>
+							technology uses a carefully.
+						</p>
+						<%= link_to 'more&rarr;'.html_safe ,vitiligo_surgical_path %>
+					</div>
+	
+				</li>
+				<li class="bg4 bleft">
+					<div class="bgImage bg_color4"></div>
+					<div class="heading color_purple">
+						Anti
 						<br/>
-						appears dull.
-					</p>
-					<%= link_to 'more&rarr;'.html_safe ,botox_path %>
-				</div>
+						Aging&nbsp;
+					</div>
+					<div class="bgDescription"></div>
+					<div class="description">
+						<h2>Anti Aging</h2>
+						<p>
+							The clock is ticking and as we age our skin
+							<br/>
+							appears dull.
+						</p>
+						<%= link_to 'more&rarr;'.html_safe ,botox_path %>
+					</div>
+	
+				</li>
+				<li class="bg5 bleft">
+					<div class="bgImage bg_color5"></div>
+					<div class="heading color_green">
+						Body
+						<br/>
+						Shaping
+					</div>
+					<div class="bgDescription"></div>
+					<div class="description">
+						<h2>Body Shaping</h2>
+						<p>
+							Loose sagging skin just does not look good and</br/> gets in the way of normal activities or movement.
+						</p>
+						<%= link_to 'more&rarr;'.html_safe ,body_shaping_path %>
+					</div>
+	
+				</li>
+			</ul>
+		</td>
+	</tr>
+</table>
 
-			</li>
-			<li class="bg5 bleft">
-				<div class="bgImage bg_color5"></div>
-				<div class="heading color_green">
-					Body
-					<br/>
-					Shaping
-				</div>
-				<div class="bgDescription"></div>
-				<div class="description">
-					<h2>Body Shaping</h2>
-					<p>
-						Loose sagging skin just does not look good and</br/> gets in the way of normal activities or movement.
-					</p>
-					<%= link_to 'more&rarr;'.html_safe ,body_shaping_path %>
-				</div>
-
-			</li>
-		</ul>
-		
-
-<br />
-
-<br />
 <br />
 
 <div class="row-fluid">
@@ -133,17 +133,19 @@
 
 <script type="text/javascript">
 	$(function() {
-		$('.bgDescription').css({ 'opacity' : 0.65 });
+		$('.bgDescription').css({
+			'opacity' : 0.65
+		});
 
 		$('#accordion > li').hover(function() {
 			var $this = $(this);
 			$this.stop().animate({
 				'width' : '480px'
 			}, 450);
-			
+
 			$('.heading', $this).stop(true, true).slideUp(400);
 			$('.bgImage', $this).stop(true, true).fadeIn(1500);
-			
+
 			$('.bgDescription', $this).stop(true, true).slideDown(500);
 			$('.description', $this).stop(true, true).fadeIn();
 
