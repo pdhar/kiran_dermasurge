@@ -26,7 +26,7 @@
                 // want to call a function here ... defined in another .
                 
                 this.boxManager.addMsg(user, msg);
-                alert("message added for user " + user);
+                //alert("message added for user " + user);
             },
             boxClosed: function(id) {}, // called when the close icon is clicked
             boxManager: {
