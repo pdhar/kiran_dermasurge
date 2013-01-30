@@ -12,9 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.core
-//= require jquery.ui.widget
-//= require jquery.ui.effect
+//= require jquery.ui.all
 
 //= require twitter/bootstrap
 //= require rails.validations

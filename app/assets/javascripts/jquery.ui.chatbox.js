@@ -24,8 +24,9 @@
             width: 250, // width of the chatbox
             messageSent: function(id, user, msg){
                 // want to call a function here ... defined in another .
-                //this.boxManager.addMsg(user.first_name, msg);
-                alert("message added!111");
+                
+                this.boxManager.addMsg(user, msg);
+                alert("message added for user " + user);
             },
             boxClosed: function(id) {}, // called when the close icon is clicked
             boxManager: {
@@ -36,6 +37,7 @@
                 },
                 addMsg: function(peer, msg) {
                 	//alert("message added!1241");
+                	
                 	msg = message.add(peer, msg);
                 	/*
                     var self = this;
@@ -134,7 +136,7 @@
         _create: function(){
             var self = this,
             options = self.options,
-            title = options.title || "No Title",
+            title = options.title || "No Title",            
             // chatbox
             uiChatbox = (self.uiChatbox = $('<div></div>'))
             .appendTo(document.body)
@@ -249,6 +251,7 @@
                     }
                     $(this).val('');
                     //message sent
+                    
                     return false;
                 }
             })

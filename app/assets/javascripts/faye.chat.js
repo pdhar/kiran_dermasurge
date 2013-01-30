@@ -10,6 +10,7 @@ $(function() {
 		var msgObject = {
     		channel: "/messages/new",
         	data: msg,
+        	user: peer,
             ext: {
                 auth_token: "anything"
             },
@@ -28,7 +29,7 @@ $(function() {
 		// handle message
 		//alert( "message "+ message['data'] + ' ' + JSON.stringify(message) + message['ext']['auth_token'] );
 		
-		box.chatbox("option", "boxManager").msgAdd("user", message['data']);
+		box.chatbox("option", "boxManager").msgAdd(message['user'], message['data']);
 	});
 	
 	//var publication = client.publish('/messages/new', {channel:'/messages/new',data:'hello from chatbox',ext:{auth_token:'anything'}});
@@ -64,10 +65,5 @@ $(function() {
 		});
 		
 	});	
-	
-	function SendFayeMessage(message){
-		
-		alert('inside function! ');
-	};
 				
 }); 
