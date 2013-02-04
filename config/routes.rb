@@ -44,7 +44,7 @@ KiranDermasurge::Application.routes.draw do
   match '/our_doctors', to: 'static_pages#our_doctors'
   match '/doc_schedule', to: 'static_pages#doc_schedule'
   match '/contact', to: 'queries#new'
-  
+  match '/chatconsole', to: 'static_pages#chatconsole'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
