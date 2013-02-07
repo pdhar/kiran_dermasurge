@@ -143,3 +143,6 @@ These last few instructions configure git so future git pull's from this repo wi
 The following is a bit of shameless self-promotion. If you use Ruby, I have created a Ruby-based tool that lets you deal with all these kinds of things with git remote branches. The tool is called, unsurprisingly, git_remote_branch :-)
 
 If you don't use Ruby, my tool is probably gonna be too much of a hassle to install. What you can do is look at an old post on my blog, where most of the stuff grb can do for you was explicitly shown. Whip out your git notes file :-)
+
+
+asdasd
