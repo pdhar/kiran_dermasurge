@@ -81,6 +81,9 @@ omniauth for twitter(Add Later)
 
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
+pbcopy -sel clip < ~/.ssh/id_rsa.pub
+
+
 ###Heroku Issue#####
 Problem: App not found after renaming an app from the website:
 
@@ -120,4 +123,23 @@ asd
     <%= f.button :submit, 'Send Message', :class => 'btn btn-success' %>
   </div>
   123
+ ddsds'
+ 
+ 
+ I'll assume your problem was that the machine on which you first created the repo crapped out when you tried to issue the git pull command.
 
+When you clone an existing git repository (like you did on your 2nd machine, the MacBook Pro), you're automatically set up to so your git pull commands will automatically merge the remote with your local changes.
+
+However, when you initially create a repo and then share it on a remote repository, you have to issue a few commands to make things as automated as a on cloned repo.
+
+# GitHub gives you that instruction, you've already done that
+# git remote add origin git@github.com:user_name/repo_name.git
+
+# GitHub doesn't specify the following instructions
+git config branch.master.remote origin
+git config branch.master.merge refs/heads/master
+These last few instructions configure git so future git pull's from this repo will merge all remote changes automatically.
+
+The following is a bit of shameless self-promotion. If you use Ruby, I have created a Ruby-based tool that lets you deal with all these kinds of things with git remote branches. The tool is called, unsurprisingly, git_remote_branch :-)
+
+If you don't use Ruby, my tool is probably gonna be too much of a hassle to install. What you can do is look at an old post on my blog, where most of the stuff grb can do for you was explicitly shown. Whip out your git notes file :-)
