@@ -145,4 +145,33 @@ The following is a bit of shameless self-promotion. If you use Ruby, I have crea
 If you don't use Ruby, my tool is probably gonna be too much of a hassle to install. What you can do is look at an old post on my blog, where most of the stuff grb can do for you was explicitly shown. Whip out your git notes file :-)
 
 
-asdasd
+### Guide to clone a repo to a new computer and push it back to github ####
+When u clone a repo and make changes and try to push it back to github you get the following error
+
+fatal: remote error: 
+You can't push to git://github.com/my_user_name/my_repo.git
+Use git@github.com:my_user_name/my_repo.git
+
+Solution:
+
+git remote set-url origin git@github.com:my_user_name/my_repo.git
+add the config setting of user name and email or setup SSH key on github
+by copying the SSH key as follows:
+
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
+pbcopy -sel clip < ~/.ssh/id_rsa.pub
+
+then setup a heroku remote using: 
+heroku git:remote -a falling-wind-1624
+
+Making a Database Backup:
+
+heroku pgbackups:capture
+curl -o latest.dump `heroku pgbackups:url`
+
+Open PG Admin 3 ... create a new database ... restore from local dump file select owner and privelege options to exclude.
+
+
+
+
