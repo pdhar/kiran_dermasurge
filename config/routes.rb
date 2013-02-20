@@ -1,13 +1,14 @@
 KiranDermasurge::Application.routes.draw do
   resources :testimonials
 
-
   resources :queries
-
 
   resources :pages
 
+  resources :chatmessages
 
+  resources :chatusers
+  
   authenticated :user do
     root :to => 'static_pages#home'
   end
@@ -44,7 +45,7 @@ KiranDermasurge::Application.routes.draw do
   match '/our_doctors', to: 'static_pages#our_doctors'
   match '/doc_schedule', to: 'static_pages#doc_schedule'
   match '/contact', to: 'queries#new'
-  match '/chatconsole', to: 'static_pages#chatconsole'
+  match '/chatconsole', to: 'chatconsole#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

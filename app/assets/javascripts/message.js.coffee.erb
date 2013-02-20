@@ -1,0 +1,49 @@
+app = angular.module("usermsg", ["ngResource"]).config ["$routeProvider", "$httpProvider",
+ ($routeProvider, $httpProvider) ->
+  
+  $routeProvider.when("/users",
+    templateUrl: '<%= asset_path("message-list.html") %>'
+    controller: UserListCtrl
+  ).when("/users/:userId",
+    templateUrl: '<%= asset_path("user-detail.html") %>'
+    controller: UserDetailCtrl
+  ).otherwise redirectTo: "/users"
+  ,($httpProvider) ->
+      $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest"
+]
+
+app.factory "Entry", ["$resource", ($resource) ->
+  $resource("/chatusers/:id", {id: "@id"}, {update: {method: "PUT"}})
+]
+
+app.factory "Msg", ["$resource", ($resource) ->
+  $resource("/chatmessages/:id", {id: "@id"}, {update: {method: "PUT"}})
+]
+
+@UserListCtrl = ["$scope", "$resource", "Entry", "Msg", ($scope, $resource, Entry, Msg) ->
+  
+  Entry = $resource("/chatusers/:id" , {id: "@id"}, {update: {method: "PUT"}})
+  $scope.users = Entry.query()
+  $scope.messages = Msg.query()
+  $scope.test = 1
+  $scope.addCustomClass = (sUsername) ->
+    if sUsername == "kirandermasurge"
+      return "is-from-me"
+    else
+      return "default-class"
+]
+
+@UserDetailCtrl = ["$scope", "$routeParams", "Entry", "Msg", ($scope, $routeParams, Entry, Msg) ->
+  $scope.userId = $routeParams.userId
+  $scope.messages = Entry.get(id: $routeParams.userId)
+  		
+  $scope.addMessage = (UserId) ->
+    
+    $scope.newEntry.user_from = "kirandermasurge" #$scope.users[$scope.userId - 1].username
+    $scope.newEntry.chatuser_id = UserId
+    entry = Msg.save($scope.newEntry)
+    
+    $scope.messages.chatmessages.push($scope.newEntry)  
+    #$scope.messages.$update()
+    $scope.newEntry = {}
+]    

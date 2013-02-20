@@ -13,13 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
-
+//= require angular
+//= require angular-resource
+//= require angular-bootstrap
 //= require twitter/bootstrap
 //= require rails.validations
 //= require rails.validations.simple_form
 //= require faye.chat.js
 //= require jquery.ui.chatbox
 //= require jquery.sticky
+//= require message
 
 
 

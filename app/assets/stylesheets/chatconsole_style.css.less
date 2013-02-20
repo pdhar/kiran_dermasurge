@@ -84,12 +84,13 @@ cursor: pointer;
 filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 
   display: inline-block;
-  text-align: right;
+  text-align: left;
   padding: 5px;
   border: 1px solid #ccc;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   height: 100%;
+  min-width: 150px;
   font-weight: bold;
   vertical-align: top;
 }
@@ -120,7 +121,23 @@ div.message{
   border-bottom-right-radius: 5px;
   margin-left: -5px;
   max-width: 400px;
+  min-width: 250px;
   min-height: 18px;
-  vertical-align: middle;
+  vertical-align: top;
+  background: #fff;
+}
+
+div.timestamp{
+  display: inline-block;
+  padding: 5px;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -5px;
+  max-width: 100px;
+  min-width: 120px;
+  min-height: 18px;
+  vertical-align: top;
   background: #fff;
 }

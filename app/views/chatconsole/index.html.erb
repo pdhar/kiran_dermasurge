@@ -1,0 +1,36 @@
+<div ng-app='usermsg' class='container' id='main'>
+
+	<div ng-controller="UserListCtrl" class='row'>
+		
+		<div class='span4'>
+			<div class='well sidebar-nav' id='users'>
+				<ul class='nav nav-list' id='user-list'>
+					<li class='nav-header'>
+						KDS Live Chat
+					</li>
+					<li class='active'>
+						<a href='#users'> <i class='icon-inbox'></i> All Messages </a>
+					</li>
+					<li class='nav-header'>
+						Users
+						(
+						<span id='num-users'>{{users.length}}</span>
+						)
+					</li>
+				</ul>
+				<ng:include src="'<%= asset_path("user-list.html") %>'"></ng:include>
+				
+			</div>
+		</div>
+		<div class='span8' id='messages'>
+			
+			
+			<br />
+			
+			<div ng-view></div>
+			
+		</div>
+	</div>
+
+	
+</div>
