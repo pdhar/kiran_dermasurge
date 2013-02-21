@@ -35,11 +35,15 @@ $(function() {
 		//alert( "message "+ message['data'] + ' ' + JSON.stringify(message) + message['ext']['auth_token'] );
 		// need to call angular controller method
 		//console.log(angular.element(document.getElementById('UserListCtrl')).scope().user);
-		console.log(angular.element($('#AngularCtrl')).scope().$apply(function(scope){
-	        scope.addFayeMsg(message['user'], message['data']);
-	        
-	    }));
-		
+		try{
+			console.log(angular.element($('#AngularCtrl')).scope().$apply(function(scope){
+		        scope.addFayeMsg(message['user'], message['data']);
+		        
+		    }));
+		}
+		catch(e){
+			//do nothing
+		}
 		//.addFayeMsg(message['user'], message['data']));
 		
 		

@@ -507,23 +507,35 @@ h1.inset_bottom {
 // Sticky Style
 
 #sticker {
-  background: rgba(92, 92, 158, 0.95);
+  //background: rgba(92, 92, 158, 0.95);
+  background-image:url('livechaticon.png');
   color: white;
-  width: 100px;
-  font-family: Droid Sans;
-  font-size: 15px;
-  line-height: 1.4em;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  text-shadow: 0 1px 1px rgba(0,0,0,.2);
-  border-radius: 50px;
-  float:left;
+  width: 208px;
+  height: 304px;
+  position: relative;
+  background-repeat:no-repeat;
+  //font-family: Droid Sans;
+  //font-size: 15px;
+  //line-height: 1.4em;
+  //font-weight: bold;
+  //text-align: center;
+  padding: 0px 5px 0px 0px;
+  //text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  //border-radius: 50px;
+  //float:left;
 }
 
 #wrapper {
-  width: 150px;
+  //width: 150px;
   margin:0 auto;
-  padding:10px 105px 0px 0px;
-  float: right;
+  //padding:10px 105px 0px 0px;
+  float: left;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;    
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
 }

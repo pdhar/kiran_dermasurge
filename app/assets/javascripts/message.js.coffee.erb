@@ -59,5 +59,7 @@ app.factory "Msg", ["$resource", ($resource) ->
     
     $scope.messages.chatmessages.push(entry)  
     #$scope.messages.$update()
+    message.add("kirandermasurge", $scope.newEntry.message)
+    
     $scope.newEntry = {}
 ]    
