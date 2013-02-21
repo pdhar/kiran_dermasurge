@@ -14,7 +14,7 @@ class ChatusersController < ApplicationController
   end
 
   def create
-    respond_with Chatuser.create(params[:entry])
+    respond_with Chatuser.create(params[:chatuser])
   end
 
   def update

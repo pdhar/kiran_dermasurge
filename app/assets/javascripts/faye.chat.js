@@ -3,6 +3,11 @@ $(function() {
 	 faye.subscribe('/messages/new', function (data) {
 	 alert(data);
 	 });*/
+	window.addEventListener('load', function() {
+	  
+	  
+	  // when using jQuery, you can do just $('#child').scope()
+	});
 	
 	message = {};
 	message.add = function (peer, msg) { 
@@ -28,6 +33,15 @@ $(function() {
 	subscription = client.subscribe('/messages/new', function(message) {
 		// handle message
 		//alert( "message "+ message['data'] + ' ' + JSON.stringify(message) + message['ext']['auth_token'] );
+		// need to call angular controller method
+		//console.log(angular.element(document.getElementById('UserListCtrl')).scope().user);
+		console.log(angular.element($('#AngularCtrl')).scope().$apply(function(scope){
+	        scope.addFayeMsg(message['user'], message['data']);
+	        
+	    }));
+		
+		//.addFayeMsg(message['user'], message['data']));
+		
 		
 		box.chatbox("option", "boxManager").msgAdd(message['user'], message['data']);
 	});

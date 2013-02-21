@@ -1,6 +1,6 @@
 <div ng-app='usermsg' class='container' id='main'>
 
-	<div ng-controller="UserListCtrl" class='row'>
+	<div id="AngularCtrl" ng-controller="UserListCtrl" class='row'>
 		
 		<div class='span4'>
 			<div class='well sidebar-nav' id='users'>
@@ -23,8 +23,7 @@
 			</div>
 		</div>
 		<div class='span8' id='messages'>
-			
-			
+			{{users}} 
 			<br />
 			
 			<div ng-view></div>

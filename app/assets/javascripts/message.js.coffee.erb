@@ -21,16 +21,30 @@ app.factory "Msg", ["$resource", ($resource) ->
 ]
 
 @UserListCtrl = ["$scope", "$resource", "Entry", "Msg", ($scope, $resource, Entry, Msg) ->
-  
+  this.name = 'parent'
   Entry = $resource("/chatusers/:id" , {id: "@id"}, {update: {method: "PUT"}})
   $scope.users = Entry.query()
   $scope.messages = Msg.query()
-  $scope.test = 1
+  
   $scope.addCustomClass = (sUsername) ->
     if sUsername == "kirandermasurge"
       return "is-from-me"
     else
       return "default-class"
+      
+  $scope.addFayeMsg = (username, message) ->
+	  hasUser = false
+	  angular.forEach $scope.users, (user) ->
+	    hasUser = true  if user.name is username
+	
+	  unless hasUser
+	    $scope.newUser = new Entry()
+	    $scope.newUser.name = username
+	    user = Entry.save($scope.newUser)
+	    $scope.users.push(user)
+	    
+	  username + " " + message + "hasUser " + hasUser 
+  	 
 ]
 
 @UserDetailCtrl = ["$scope", "$routeParams", "Entry", "Msg", ($scope, $routeParams, Entry, Msg) ->
@@ -43,7 +57,7 @@ app.factory "Msg", ["$resource", ($resource) ->
     $scope.newEntry.chatuser_id = UserId
     entry = Msg.save($scope.newEntry)
     
-    $scope.messages.chatmessages.push($scope.newEntry)  
+    $scope.messages.chatmessages.push(entry)  
     #$scope.messages.$update()
     $scope.newEntry = {}
 ]    
