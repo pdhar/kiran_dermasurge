@@ -37,8 +37,8 @@ $(function() {
 		//console.log(angular.element(document.getElementById('UserListCtrl')).scope().user);
 		try{
 			console.log(angular.element($('#AngularCtrl')).scope().$apply(function(scope){
-		        scope.addFayeMsg(message['user'], message['data']);
-		        
+		        return scope.addFayeMsg(message['user'], message['data']);
+		         
 		    }));
 		}
 		catch(e){

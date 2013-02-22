@@ -25,7 +25,12 @@ app.factory "Msg", ["$resource", ($resource) ->
   Entry = $resource("/chatusers/:id" , {id: "@id"}, {update: {method: "PUT"}})
   $scope.users = Entry.query()
   $scope.messages = Msg.query()
+  $scope.test = -1 
+  $scope.test2 = -1 
   
+  successUpdateCallback = (result) ->
+   	  alert ('hi ' + angular.toJson(result))
+   	  
   $scope.addCustomClass = (sUsername) ->
     if sUsername == "kirandermasurge"
       return "is-from-me"
@@ -33,18 +38,23 @@ app.factory "Msg", ["$resource", ($resource) ->
       return "default-class"
       
   $scope.addFayeMsg = (username, message) ->
-	  hasUser = false
+	  userId = -1
 	  angular.forEach $scope.users, (user) ->
-	    hasUser = true  if user.name is username
+	    userId = user.id  if user.name is username
 	
-	  unless hasUser
+	  if userId is -1
 	    $scope.newUser = new Entry()
 	    $scope.newUser.name = username
-	    user = Entry.save($scope.newUser)
-	    $scope.users.push(user)
+	    $scope.newUser.$save([], successUpdateCallback) 
+	      
+	    $scope.test = $scope.newUser
+	    $scope.users.push($scope.newUser)
 	    
-	  username + " " + message + "hasUser " + hasUser 
-  	 
+	  "debug: " + username + " " + message + "userId " + userId
+   
+   	
+   		  
+	  
 ]
 
 @UserDetailCtrl = ["$scope", "$routeParams", "Entry", "Msg", ($scope, $routeParams, Entry, Msg) ->
