@@ -3,19 +3,15 @@ $(function() {
 	 faye.subscribe('/messages/new', function (data) {
 	 alert(data);
 	 });*/
-	window.addEventListener('load', function() {
-	  
-	  
-	  // when using jQuery, you can do just $('#child').scope()
-	});
 	
 	message = {};
-	message.add = function (peer, msg) { 
+	message.add = function (peer, msg, to_user) { 
 		//alert('inside function! ');
 		var msgObject = {
     		channel: "/messages/new",
         	data: msg,
         	user: peer,
+        	to_user: to_user,
             ext: {
                 auth_token: "anything"
             },
@@ -35,19 +31,29 @@ $(function() {
 		//alert( "message "+ message['data'] + ' ' + JSON.stringify(message) + message['ext']['auth_token'] );
 		// need to call angular controller method
 		//console.log(angular.element(document.getElementById('UserListCtrl')).scope().user);
-		try{
-			console.log(angular.element($('#AngularCtrl')).scope().$apply(function(scope){
-		        return scope.addFayeMsg(message['user'], message['data']);
-		         
-		    }));
-		}
-		catch(e){
-			//do nothing
-		}
-		//.addFayeMsg(message['user'], message['data']));
+		if(box){
+		  console.log("box object user2: " + box.chatbox("option").user); 	
+		} 
+		if(message['user'] != "kirandermasurge"){
+			try{
+				//console.log("current user: "+ peer);
+				console.log(angular.element($('#AngularCtrl')).scope().$apply(function(scope){
+			        return scope.addFayeMsg(message['user'], message['data']);
+			         
+			    }));
+			}
+			catch(e){
+				//do nothing
+			}
+		} 
 		
-		
-		box.chatbox("option", "boxManager").msgAdd(message['user'], message['data']);
+		if(box){
+			console.log("A: " + box.chatbox("option").user + "B: " + message['user'] + "C: " + message['to_user']);
+			if((box.chatbox("option").user == message['to_user']) || (box.chatbox("option").user == message['user']) ){
+				box.chatbox("option", "boxManager").msgAdd(message['user'], message['data']);	
+			}
+			
+		}
 	});
 	
 	//var publication = client.publish('/messages/new', {channel:'/messages/new',data:'hello from chatbox',ext:{auth_token:'anything'}});

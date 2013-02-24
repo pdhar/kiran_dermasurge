@@ -14,7 +14,16 @@ class ChatusersController < ApplicationController
   end
 
   def create
-    respond_with Chatuser.create(params[:chatuser])
+    
+    
+    @chatuser = Chatuser.create(params[:chatuser])
+    if (defined? params[:chatmessage])
+      #Rails.logger.debug("Paramans defined Server:")
+      params[:chatmessage][:chatuser_id] = @chatuser.id
+      Chatmessage.create(params[:chatmessage])
+    end
+    #Rails.logger.debug("Hello Server #{params[:chatmessage]}")
+    respond_with @chatuser
   end
 
   def update

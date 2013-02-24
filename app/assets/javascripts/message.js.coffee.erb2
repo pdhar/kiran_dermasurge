@@ -20,7 +20,7 @@ app.factory "Msg", ["$resource", ($resource) ->
   $resource("/chatmessages/:id", {id: "@id"}, {update: {method: "PUT"}})
 ]
 
-@UserListCtrl = ["$scope", "$resource", "Entry", "Msg", ($scope, $resource, Entry, Msg) ->
+@UserListCtrl = ["$scope", "$resource", "$location", "Entry", "Msg", ($scope, $resource, $location, Entry, Msg) ->
   this.name = 'parent'
   Entry = $resource("/chatusers/:id" , {id: "@id"}, {update: {method: "PUT"}})
   $scope.users = Entry.query()
@@ -28,9 +28,19 @@ app.factory "Msg", ["$resource", ($resource) ->
   $scope.test = -1 
   $scope.test2 = -1 
   
-  successUpdateCallback = (result) ->
-   	  alert ('hi ' + angular.toJson(result))
-   	  
+  
+  $scope.successUpdateCallback = (result) ->
+    #add a new message to the user
+    #$scope.newMsg.chatuser_id = result.userId
+    #$scope.newMsg.$save()
+    #alert ('hi ' + angular.toJson(result))
+    #myValue.getValue()
+    console.log("path: " + $location.path())
+    currentPath = $location.path()
+    unless currentPath == ("/users/" + result.id)
+      newPath =   $location.path() + "/" + result.id
+	  $location.path(newPath)
+  	
   $scope.addCustomClass = (sUsername) ->
     if sUsername == "kirandermasurge"
       return "is-from-me"
@@ -42,19 +52,30 @@ app.factory "Msg", ["$resource", ($resource) ->
 	  angular.forEach $scope.users, (user) ->
 	    userId = user.id  if user.name is username
 	
+	  $scope.newMsg = new Msg()
+	  $scope.newMsg.message = message
+	  $scope.newMsg.user_from = username
+	  #myValue.setValue(message.toString())
+	  
 	  if userId is -1
-	    $scope.newUser = new Entry()
-	    $scope.newUser.name = username
-	    $scope.newUser.$save([], successUpdateCallback) 
-	      
-	    $scope.test = $scope.newUser
-	    $scope.users.push($scope.newUser)
-	    
+	     $scope.newUser = new Entry()
+	     $scope.newUser.chatmessage = $scope.newMsg
+	     $scope.newUser.name = username
+	     #console.log("test:" + angular.toJson($scope.newUser))
+	     $scope.newUser.$save($scope.successUpdateCallback) 
+	     $scope.test = $scope.newUser
+	     $scope.users.push($scope.newUser)
+	  else
+	  	 #add message
+	  	 $scope.newMsg.chatuser_id = userId
+	  	 $scope.newMsg.$save()
+	  	 #route to current user path console.log("path" + $location.path())
+	  	 currentPath = $location.path()
+	     if currentPath isnt ("/users/" + userId)
+            newPath = $location.path() + "/" + userId
+            $location.path newPath
 	  "debug: " + username + " " + message + "userId " + userId
    
-   	
-   		  
-	  
 ]
 
 @UserDetailCtrl = ["$scope", "$routeParams", "Entry", "Msg", ($scope, $routeParams, Entry, Msg) ->
@@ -69,7 +90,13 @@ app.factory "Msg", ["$resource", ($resource) ->
     
     $scope.messages.chatmessages.push(entry)  
     #$scope.messages.$update()
-    message.add("kirandermasurge", $scope.newEntry.message)
+    userTo = "unknown"
+    angular.forEach $scope.users, (user) ->
+  	  #console.log "test:" + user.id + "UserId: " + UserId + "userto: " + userTo + "name: " + user.name
+  	  if user.id.toString() == UserId
+  	    userTo = user.name
+    
+    message.add("kirandermasurge", $scope.newEntry.message, userTo)
     
     $scope.newEntry = {}
 ]    

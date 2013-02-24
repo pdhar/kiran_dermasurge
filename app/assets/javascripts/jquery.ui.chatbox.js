@@ -36,39 +36,7 @@
                     this.elem = elem;
                 },
                 addMsg: function(peer, msg) {
-                	//alert("message added!1241");
-                	
-                	msg = message.add(peer, msg);
-                	/*
-                    var self = this;
-                    var box = self.elem.uiChatboxLog;
-                    var e = document.createElement('div');
-                    box.append(e);
-                    $(e).hide();
-
-                    var systemMessage = false;
-
-                    if (peer) {
-                        var peerName = document.createElement("b");
-                        $(peerName).text(peer + ": ");
-                        e.appendChild(peerName);
-                    } else {
-                        systemMessage = true;
-                    }
-
-                    var msgElement = document.createElement(systemMessage ? "i" : "span");
-                    $(msgElement).text(msg);
-                    e.appendChild(msgElement);
-                    $(e).addClass("ui-chatbox-msg");
-                    $(e).fadeIn();
-                    self._scrollToBottom();
-
-                    if (!self.elem.uiChatboxTitlebar.hasClass("ui-state-focus") && !self.highlightLock) {
-                        self.highlightLock = true;
-                        self.highlightBox();
-                    }*/
-                    
-                    
+                	msg = message.add(peer, msg, "kirandermasurge");
                 },
                 highlightBox: function() {
                     //this.elem.uiChatbox.addClass("ui-state-highlight");
