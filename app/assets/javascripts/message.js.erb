@@ -41,7 +41,7 @@ app.factory("Msg", [
 ]);
 
 this.UserListCtrl = [
-  "$scope", "$resource", "$location", "Entry", "Msg", function($scope, $resource, $location, Entry, Msg) {
+  "$scope", "$resource", "$route", "$routeParams", "$location", "Entry", "Msg", function($scope, $resource, $route, $routeParams, $location, Entry, Msg) {
     this.name = 'parent';
     Entry = $resource("/chatusers/:id", {
       id: "@id"
@@ -52,8 +52,7 @@ this.UserListCtrl = [
     });
     $scope.users = Entry.query();
     $scope.messages = Msg.query();
-    $scope.test = -1;
-    $scope.test2 = -1;
+    
     $scope.successUpdateCallback = function(result) {
       var currentPath, newPath;
       console.log("path: " + $location.path());
@@ -62,6 +61,19 @@ this.UserListCtrl = [
         newPath = "/users/" + result.id;
       }
       return $location.path(newPath);
+    };
+    $scope.messageUpdateCallback = function(result) {
+      currentPath = $location.path();
+	  console.log("path: " + $location.path() + "result: " + angular.toJson(result));
+	  
+	  if (currentPath !== ("/users/" + result.chatuser_id)) {
+	      newPath = "/users/" + result.chatuser_id;
+	      $location.path(newPath);
+	  }
+	  else{
+	  	  //reload the data
+	  	  $route.reload();
+	  }
     };
     $scope.addCustomClass = function(sUsername) {
       if (sUsername === "kirandermasurge") {
@@ -90,13 +102,7 @@ this.UserListCtrl = [
         $scope.users.push($scope.newUser);
       } else {
         $scope.newMsg.chatuser_id = userId;
-        $scope.newMsg.$save();
-        currentPath = $location.path();
-        console.log("path: " + $location.path());
-	    if (currentPath !== ("/users/" + userId)) {
-	        newPath = "/users/" + userId;
-	        $location.path(newPath);
-	    }
+        $scope.newMsg.$save($scope.messageUpdateCallback);
       }
       return "debug: " + username + " " + message + "userId " + userId;
     };
@@ -123,6 +129,7 @@ this.UserDetailCtrl = [
       });
       message.add("kirandermasurge", $scope.newEntry.message, userTo);
       return $scope.newEntry = {};
+      
     };
   }
 ];

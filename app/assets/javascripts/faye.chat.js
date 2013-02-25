@@ -44,6 +44,8 @@ $(function() {
 			}
 			catch(e){
 				//do nothing
+				
+			   
 			}
 		} 
 		
