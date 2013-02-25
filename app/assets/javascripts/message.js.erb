@@ -55,7 +55,7 @@ this.UserListCtrl = [
     
     $scope.successUpdateCallback = function(result) {
       var currentPath, newPath;
-      console.log("path: " + $location.path());
+      //console.log("path: " + $location.path());
       currentPath = $location.path();
       if (currentPath !== ("/users/" + result.id)) {
         newPath = "/users/" + result.id;
@@ -64,7 +64,7 @@ this.UserListCtrl = [
     };
     $scope.messageUpdateCallback = function(result) {
       currentPath = $location.path();
-	  console.log("path: " + $location.path() + "result: " + angular.toJson(result));
+	  //console.log("path: " + $location.path() + "result: " + angular.toJson(result));
 	  
 	  if (currentPath !== ("/users/" + result.chatuser_id)) {
 	      newPath = "/users/" + result.chatuser_id;

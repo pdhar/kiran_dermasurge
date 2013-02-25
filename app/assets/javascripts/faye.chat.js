@@ -31,26 +31,24 @@ $(function() {
 		//alert( "message "+ message['data'] + ' ' + JSON.stringify(message) + message['ext']['auth_token'] );
 		// need to call angular controller method
 		//console.log(angular.element(document.getElementById('UserListCtrl')).scope().user);
-		if(box){
+		/*if(box){
 		  console.log("box object user2: " + box.chatbox("option").user); 	
-		} 
+		} */
 		if(message['user'] != "kirandermasurge"){
 			try{
 				//console.log("current user: "+ peer);
-				console.log(angular.element($('#AngularCtrl')).scope().$apply(function(scope){
+				//console.log()
+				angular.element($('#AngularCtrl')).scope().$apply(function(scope){
 			        return scope.addFayeMsg(message['user'], message['data']);
-			         
-			    }));
+			    });
 			}
 			catch(e){
 				//do nothing
-				
-			   
 			}
 		} 
 		
 		if(box){
-			console.log("A: " + box.chatbox("option").user + "B: " + message['user'] + "C: " + message['to_user']);
+			//console.log("A: " + box.chatbox("option").user + "B: " + message['user'] + "C: " + message['to_user']);
 			if((box.chatbox("option").user == message['to_user']) || (box.chatbox("option").user == message['user']) ){
 				box.chatbox("option", "boxManager").msgAdd(message['user'], message['data']);	
 			}
