@@ -28,9 +28,49 @@ ul.accordion li {
     -moz-transition: all 0.15s ease;
     -o-transition: all 0.15s ease;
     transition: all 0.15s ease;*/
+   
+	/* Firefox 4 */
+	-moz-transition-property:background-image;
+	-moz-transition-duration:0.1s;
+	-moz-transition-timing-function:linear;
+	-moz-transition-delay:0.2s;
+	/* Safari and Chrome */
+	-webkit-transition-property:width;
+	-webkit-transition-duration:0.1s;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:0.2s;
+	/* Opera */
+	-o-transition-property:width;
+	-o-transition-duration:0.1s;
+	-o-transition-timing-function:linear;
+	-o-transition-delay:0.2s;
 }
 ul.accordion li.bg1 {
 	background-image: url('accordion_bg1_bw.jpg');
+	background-position: 28% 20%;
+}
+#accordion1:hover{
+	background-image: url('accordion_bg1_color.jpg');
+	background-position: 28% 20%;
+}
+#accordion2:hover{
+	background-image: url('accordion_bg2_color.jpg');
+	background-position: 45% 20%;
+}
+#accordion3:hover{
+	background-image: url('accordion_bg3_color.jpg');
+	background-position: 45% 20%;
+}
+#accordion4:hover{
+	background-image: url('accordion_bg4_color.jpg');
+	background-position: 28% 20%;
+}
+#accordion5:hover{
+	background-image: url('accordion_bg5_color.jpg');
+	background-position: 28% 20%;
+}
+#accordion6:hover{
+	background-image: url('accordion_bg6_color.jpg');
 	background-position: 28% 20%;
 }
 ul.accordion li.bg1_color {
