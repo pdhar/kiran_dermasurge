@@ -70,7 +70,7 @@
 
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-38778547-1']);
-		  _gaq.push(['_setDomainName', 'kirandermatekniks.com']);
+		  _gaq.push(['_setDomainName', document.domain ]);
 		  _gaq.push(['_trackPageview']);
 		
 		  (function() {
@@ -78,31 +78,22 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-		
 		</script>
 	</head>
-	<body>
+	<body style="position: relative;">
 
 		<div id="fb-root"></div>
 
 		<%= render 'layouts/header' %>
-
-		<!--div id="wrapper">
-		<div id="sticker">
-		<p>Live Chat</p>
-		</div>
-		</div-->
-
+		
 		<div id="wrapper" >
-			<a id="chatbutton" href="#">
-			<div id="sticker">
-				
-
-			</div>
+			<a id="chatbutton" href="#" onclick="this.href='javascript:return false;';">
+				<div id="sticker">
+				</div>
 			 </a>
 		</div>
 		<div class="container">
-
+			<!-- hello  url_for(:controller=>'static_pages', :action=>'home', :only_path =>false )  -->
 			<% flash.each do |key, value| %>
 			<div class="alert alert-<%= key %>">
 				<%= value %>
