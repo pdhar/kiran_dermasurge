@@ -3,7 +3,7 @@
 	<tr>
 		<td>
 			<ul class="accordion" id="accordion">
-				<li class="bg1">
+				<li id="accordion1" class="bg1">
 	
 					<div class="bgImage bg_color1"></div>
 					<div class="heading color_red">
@@ -23,7 +23,7 @@
 					</div>
 	
 				</li>
-				<li class="bg2">
+				<li id="accordion2" class="bg2">
 					<div class="bgImage bg_color2"></div>
 					<div class="heading color_gold">
 						Hair
@@ -42,7 +42,7 @@
 					</div>
 	
 				</li>
-				<li class="bg3">
+				<li id="accordion3" class="bg3">
 					<div class="bgImage bg_color3"></div>
 					<div class="heading color_blue">
 						Vitiligo
@@ -61,7 +61,42 @@
 					</div>
 	
 				</li>
-				<li class="bg4 bleft">
+				<li id="accordion6" class="bg6 bleft">
+					<div class="bgImage bg_color6"></div>
+					<div class="heading color_orange">
+						Hair
+						<br/>
+						Transplant
+					</div>
+					<div class="bgDescription"></div>
+					<div class="description">
+						<h2>Hair Transplant</h2>
+						<p>
+							
+							Hair transplantation is a surgical technique that involves</br/> moving skin containing hair follicles from one part of the body to balding parts.
+						</p>
+						<%= link_to 'more&rarr;'.html_safe ,hair_transplant_path %>
+					</div>
+	
+				</li>
+				<li id="accordion5" class="bg5 bleft">
+					<div class="bgImage bg_color5"></div>
+					<div class="heading color_green">
+						Body
+						<br/>
+						Shaping
+					</div>
+					<div class="bgDescription"></div>
+					<div class="description">
+						<h2>Body Shaping</h2>
+						<p>
+							Loose sagging skin just does not look good and</br/> gets in the way of normal activities or movement.
+						</p>
+						<%= link_to 'more&rarr;'.html_safe ,body_shaping_path %>
+					</div>
+	
+				</li>
+				<li id="accordion4" class="bg4 bleft">
 					<div class="bgImage bg_color4"></div>
 					<div class="heading color_purple">
 						Anti
@@ -80,23 +115,8 @@
 					</div>
 	
 				</li>
-				<li class="bg5 bleft">
-					<div class="bgImage bg_color5"></div>
-					<div class="heading color_green">
-						Body
-						<br/>
-						Shaping
-					</div>
-					<div class="bgDescription"></div>
-					<div class="description">
-						<h2>Body Shaping</h2>
-						<p>
-							Loose sagging skin just does not look good and</br/> gets in the way of normal activities or movement.
-						</p>
-						<%= link_to 'more&rarr;'.html_safe ,body_shaping_path %>
-					</div>
-	
-				</li>
+				
+				
 			</ul>
 		</td>
 	</tr>
@@ -134,38 +154,84 @@
 <script type="text/javascript">
 	$(function() {
 		$('.bgDescription').css({
-			'opacity' : 0.65
+			'opacity' : 0.35
 		});
-
+		
 		$('#accordion > li').hover(function() {
 			var $this = $(this);
+			
+			//alert($(this).attr('id'));
+			
 			$this.stop().animate({
-				'width' : '480px'
+				'width' : '450px'
 			}, 450);
 
 			$('.heading', $this).stop(true, true).slideUp(400);
-			$('.bgImage', $this).stop(true, true).fadeIn(1500);
+			//$('.bgImage', $this).stop(true, true).fadeIn(1500);
 
 			$('.bgDescription', $this).stop(true, true).slideDown(500);
 			$('.description', $this).stop(true, true).fadeIn();
 
 			$this.siblings().stop().animate({
-				'width' : '95px'
+				'width' : '90px'
 			}, 450);
+			
+			switch($(this).attr('id')){
+				case 'accordion1':
+					$(this).removeClass('bg1').addClass('bg1_color');
+					break;
+				case 'accordion2':
+					$(this).removeClass('bg2').addClass('bg2_color');
+					break;
+				case 'accordion3':
+					$(this).removeClass('bg3').addClass('bg3_color');
+					break;
+				case 'accordion4':
+					$(this).removeClass('bg4').addClass('bg4_color');
+					break;
+				case 'accordion5':
+					$(this).removeClass('bg5').addClass('bg5_color');
+					break;
+				case 'accordion6':
+					$(this).removeClass('bg6').addClass('bg6_color');
+					break;
+			}
+
 		}, function() {
 			var $this = $(this);
 			$this.stop().animate({
-				'width' : '175px'
+				'width' : '145px'
 			}, 450);
-
-			$('.bgImage', $this).stop(true, true).fadeOut(100);
+			
+			//$('.bgImage', $this).stop(true, true).fadeOut(100);
 			$('.description', $this).stop(true, true).fadeOut(500);
 			$('.bgDescription', $this).stop(true, true).slideUp(500);
 			$('.heading', $this).stop(true, true).slideDown(500);
 
 			$this.siblings().stop().animate({
-				'width' : '175px'
+				'width' : '145px'
 			}, 450);
+			
+			switch($(this).attr('id')){
+				case 'accordion1':
+					$(this).removeClass('bg1_color').addClass('bg1');
+					break;
+				case 'accordion2':
+					$(this).removeClass('bg2_color').addClass('bg2');
+					break;
+				case 'accordion3':
+					$(this).removeClass('bg3_color').addClass('bg3');
+					break;
+				case 'accordion4':
+					$(this).removeClass('bg4_color').addClass('bg4');
+					break;
+				case 'accordion5':
+					$(this).removeClass('bg5_color').addClass('bg5');
+					break;
+				case 'accordion6':
+					$(this).removeClass('bg6_color').addClass('bg6');
+					break;
+			}
 
 		});
 	}); 
