@@ -191,11 +191,12 @@ ul.accordion li .description a {
 	font-style: normal;
 	font-size: 11px;
 	text-decoration: none;
-	color: #888;
+	color: #5c5c9e;
 }
 ul.accordion li .description a:hover {
 	color: #333;
 	text-decoration: underline;
+	font-style: bold;
 }
 
 ul.accordion li .bgDescription {
