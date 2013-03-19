@@ -1,7 +1,7 @@
 module ApplicationHelper
   # Returns the full title on a per-page basis.
   def full_title(page_title)
-    base_title = "Kiran Dermasurge - Dedicated to Excellence in Dermatology"
+    base_title = "Dedicated to Excellence in Dermatology & Clinical Skincare Treatment | Kiran Dermasurge"
     if page_title.empty?
     base_title
     else
