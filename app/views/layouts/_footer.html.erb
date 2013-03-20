@@ -1,16 +1,24 @@
 <footer>
-	<div>
+	<div style="width: 25%; float: left; margin-top:18px;">
 		<%= link_to image_tag("facebook.png", alt: "kirandermasurge facebook page", border: "0"), "https://www.facebook.com/kiranderma", :class => 'footer_logo' %>
 		<%= link_to image_tag("twitter.png", alt: "kirandermasurge twitter page", border: "0"), "http://twitter.com/KiranDerma", :class => 'footer_logo' %>
 		
 		<%= link_to image_tag("//ssl.gstatic.com/images/icons/gplus-32.png", alt: "kirandermasurge Google+ page", border: "0"), "//plus.google.com/113240898052101591436?prsrc=3", :class => 'footer_logo' %>
 		
 		<%= link_to image_tag("//s.ytimg.com/yt/img/creators_corner/YouTube/youtube_32x32.png", alt: "kirandermasurge Google+ page", border: "0"), "http://www.youtube.com/user/kirandermasurge", :class => 'footer_logo' %>
-		
+	<small> Made by Pranav Dhar</a>. Contact: <a href="mailto:pranav.dhar2@gmail.com">pranav.dhar2@gmail.com</a>. </small>	
 	</div>
-	<small> Made by Pranav Dhar</a>. Contact: <a href="mailto:pranav.dhar2@gmail.com">pranav.dhar2@gmail.com</a>. </small>
+	<br/>
+	
 	<nav>
 		<ul>
+			<li>
+				<practo:abs_widget widget="c2f832108f756aa5"></practo:abs_widget>
+				<script src="https://www.practo.com/bundles/practopractoapp/js/abs_widget_helper.js"></script>
+				<script>
+					$(".practo_link").remove();
+				</script>
+			</li>
 			<li>
 				<%= link_to "About",   about_path %>
 			</li>
@@ -20,6 +28,7 @@
 			<li>
 				<%= link_to "Contact", contact_path %>
 			</li>
+			
 			<!--li><a href="http://news.railstutorial.org/">News</a></li-->
 		</ul>
 	</nav>
