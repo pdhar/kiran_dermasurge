@@ -23,6 +23,8 @@
 //= require jquery.ui.chatbox
 //= require jquery.sticky
 //= require message
+//= require jquery.titlealert.js
+
 
 
 

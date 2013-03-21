@@ -60,7 +60,10 @@ this.UserListCtrl = [
       if (currentPath !== ("/users/" + result.id)) {
         newPath = "/users/" + result.id;
       }
-      return $location.path(newPath);
+   	  $location.path(newPath);
+   	  //alert title bar and sound
+   	  $.playAlert('You have a new message!!','alert');
+      return;
     };
     $scope.messageUpdateCallback = function(result) {
       currentPath = $location.path();
@@ -74,6 +77,8 @@ this.UserListCtrl = [
 	  	  //reload the data
 	  	  $route.reload();
 	  }
+	  //alert title bar and sound
+   	  $.playAlert('You have a new message!!','alert');
     };
     $scope.addCustomClass = function(sUsername) {
       if (sUsername === "kirandermasurge") {
