@@ -19,13 +19,14 @@
             id: null, //id for the DOM element
             title: null, // title of the chatbox
             user: null, // can be anything associated with this chatbox
+            email: "null",
             hidden: false,
             offset: 0, // relative to right edge of the browser window
             width: 250, // width of the chatbox
-            messageSent: function(id, user, msg){
+            messageSent: function(id, user, msg, email){
                 // want to call a function here ... defined in another .
-                
-                this.boxManager.addMsg(user, msg);
+                //alert('email: ' + email);
+                this.boxManager.addMsg(user, msg, email);
                 //alert("message added for user " + user);
             },
             boxClosed: function(id) {}, // called when the close icon is clicked
@@ -35,8 +36,11 @@
                 init: function(elem) {
                     this.elem = elem;
                 },
-                addMsg: function(peer, msg) {
-                	msg = message.add(peer, msg, "kirandermasurge");
+                addMsg: function(peer, msg, email) {
+                	this.msgAdd(peer, msg);
+                	msg = message.add(peer, msg, "kirandermasurge", email);
+                	//box.chatbox("option", "boxManager").msgAdd(message['user'], message['data']);
+                	
                 },
                 highlightBox: function() {
                     //this.elem.uiChatbox.addClass("ui-state-highlight");
@@ -104,7 +108,7 @@
         _create: function(){
             var self = this,
             options = self.options,
-            title = options.title || "No Title",            
+            title = options.title || "No Title",           
             // chatbox
             uiChatbox = (self.uiChatbox = $('<div></div>'))
             .appendTo(document.body)
@@ -208,14 +212,11 @@
                 'ui-corner-all'
             )
             .appendTo(uiChatboxInput)
-            
-            
-            
             .keydown(function(event) {
                 if(event.keyCode && event.keyCode == $.ui.keyCode.ENTER) {
                     msg = $.trim($(this).val());
                     if(msg.length > 0) {
-                        self.options.messageSent(self.options.id, self.options.user, msg);
+                        self.options.messageSent(self.options.id, self.options.user, msg, self.options.email);
                     }
                     $(this).val('');
                     //message sent

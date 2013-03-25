@@ -95,7 +95,7 @@
 		      width: 350,
 		      modal: true,
 		      buttons: {
-		        "Create an account": function() {
+		        "Start Chat": function() {
 		          var bValid = true;
 		          allFields.removeClass( "ui-state-error" );
 		 
@@ -118,6 +118,8 @@
 		            $( this ).dialog( "close" );
 		          }
 		          */
+		         //alert('email' + email.val());
+		         
 		         if ( bValid ) {
 			          if (box) {
 							box.chatbox("option", "boxManager").toggleBox();
@@ -125,6 +127,7 @@
 							box = $("#chat_div").chatbox({
 								id : "chat_div",
 								user  : name.val(),	
+								email : email.val(),
 								title : "Live Chat"
 							});
 							

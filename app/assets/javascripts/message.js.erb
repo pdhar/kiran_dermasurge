@@ -87,7 +87,7 @@ this.UserListCtrl = [
         return "default-class";
       }
     };
-    return $scope.addFayeMsg = function(username, message) {
+    return $scope.addFayeMsg = function(username, message, email) {
       var userId;
       userId = -1;
       angular.forEach($scope.users, function(user) {
@@ -102,6 +102,7 @@ this.UserListCtrl = [
         $scope.newUser = new Entry();
         $scope.newUser.chatmessage = $scope.newMsg;
         $scope.newUser.name = username;
+        $scope.newUser.email = email;
         $scope.newUser.$save($scope.successUpdateCallback);
         $scope.test = $scope.newUser;
         $scope.users.push($scope.newUser);
@@ -116,11 +117,27 @@ this.UserListCtrl = [
 
 this.UserDetailCtrl = [
   "$scope", "$routeParams", "Entry", "Msg", function($scope, $routeParams, Entry, Msg) {
+  	
+  	//$scope.selectedUser = null;
     $scope.userId = $routeParams.userId;
+    /*angular.forEach($scope.users, function(user) {
+        if (user.id == $scope.userId) {
+          return $scope.selectedUser = user;
+        }
+    });*/
+      
     $scope.messages = Entry.get({
       id: $routeParams.userId
     });
+	
+	$scope.updateUserDetail = function(UserId) {
+    	
+    	$scope.messages.$update();
+    	
+    };
+    
     return $scope.addMessage = function(UserId) {
+    	
       var entry, userTo;
       $scope.newEntry.user_from = "kirandermasurge";
       $scope.newEntry.chatuser_id = UserId;
@@ -136,5 +153,6 @@ this.UserDetailCtrl = [
       return $scope.newEntry = {};
       
     };
+    
   }
 ];

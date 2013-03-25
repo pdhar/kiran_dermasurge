@@ -27,7 +27,13 @@ class ChatusersController < ApplicationController
   end
 
   def update
-    respond_with Chatuser.update(params[:id], params[:entry])
+    
+    respond_with Chatuser.update(params[:id], params[:chatuser])
+      #respond_to do |format|
+      #  format.json { head :ok }
+      #end
+    #end
+    
   end
 
   def destroy
