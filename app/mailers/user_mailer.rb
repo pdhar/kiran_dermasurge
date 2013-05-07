@@ -9,7 +9,7 @@ class UserMailer < ActionMailer::Base
   def contact_us(query)
     @query = query
     
-    mail to: "kirander@kirandermatekniks.com", subject: @query.subject
+    mail to: "info@kirandermasurge.com", subject: @query.subject
     mail to: "pranav.dhar2@gmail.com", subject: @query.subject
   end
 end
