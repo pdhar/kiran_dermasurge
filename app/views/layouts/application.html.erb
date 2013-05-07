@@ -15,6 +15,30 @@
 
 		<%= csrf_meta_tags %>
 		<%= render 'layouts/shim' %>
+		
+		<% if params[:query] && controller?("static_pages") && action?("home") %>
+
+			<!-- Google Code for Lead Conversion Page -->
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			var google_conversion_id = 986776173;
+			var google_conversion_language = "en";
+			var google_conversion_format = "2";
+			var google_conversion_color = "ffffff";
+			var google_conversion_label = "n__lCNP48gQQ7YTE1gM";
+			var google_conversion_value = 0;
+			/* ]]> */
+			</script>
+			<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+			</script>
+			<noscript>
+			<div style="display:inline;">
+			<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/986776173/?value=0&amp;label=n__lCNP48gQQ7YTE1gM&amp;guid=ON&amp;script=0"/>
+			</div>
+			</noscript>
+		
+		<% end %>
+		
 		<script>
 			( function(d, s, id) {
 					var js, fjs = d.getElementsByTagName(s)[0];

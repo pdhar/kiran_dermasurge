@@ -1,5 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
+    #respond_to do |format|
+    ##  format.html { render "home", :locals => {:showconversion => false}}
+    #  format.json { render json: @pages }
+    #end
   end
 
   def about

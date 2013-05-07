@@ -21,7 +21,7 @@ class QueriesController < ApplicationController
         
         # Send Email
         UserMailer.contact_us(@query).deliver
-        format.html { redirect_to root_url, notice: 'Message sent! Thank you for contacting us. ' + @query.name}
+        format.html { redirect_to root_url({:query => true}), notice: 'Message sent! Thank you for contacting us. ' + @query.name}
         
       else
         format.html { render action: "new" }
