@@ -56,6 +56,10 @@
 				$("#sticker").sticky({
 					topSpacing : 90
 				});
+				
+				$("#specialoffer").sticky({
+					topSpacing : 90
+				});
 			});
 		</script>
 
@@ -185,17 +189,27 @@
 		  
 	</head>
 	<body style="position: relative;">
-
+		
 		<div id="fb-root"></div>
 
 		<%= render 'layouts/header' %>
 		
+		
+				
 		<div id="wrapper" >
 			<a id="create-user" href="#" onclick="this.href='javascript:return false;';">
 				<div id="sticker">
 				</div>
 			 </a>
+			 
+			 
 		</div>
+		
+		<div id="wrapperright">
+			
+				<span id="specialoffer"> <img alt="Img_home1" src="/assets/special_offer.png"> </span>
+		</div>
+				
 		<div class="container">
 			<!-- hello  url_for(:controller=>'static_pages', :action=>'home', :only_path =>false )  -->
 			<% flash.each do |key, value| %>
@@ -205,6 +219,8 @@
 
 			<% end %>
 
+
+				
 			<%= render 'layouts/locations' %>
 
 			<!--div class="modal hide fade in" data-backdrop="static" id="RegistrationEditModal">
