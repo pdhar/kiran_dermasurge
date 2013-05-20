@@ -44,6 +44,7 @@ KiranDermasurge::Application.routes.draw do
   match '/whats_new', to: 'static_pages#whats_new'
   match '/our_doctors', to: 'static_pages#our_doctors'
   match '/doc_schedule', to: 'static_pages#doc_schedule'
+  match '/special_offer', to: 'static_pages#special_offer'
   match '/contact', to: 'queries#new'
   match '/chatconsole', to: 'chatconsole#index'
   
