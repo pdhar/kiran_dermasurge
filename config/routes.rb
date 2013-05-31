@@ -1,4 +1,7 @@
 KiranDermasurge::Application.routes.draw do
+  resources :faqs
+
+
   resources :testimonials
 
   resources :queries

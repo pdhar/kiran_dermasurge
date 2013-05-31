@@ -1,0 +1,49 @@
+
+
+
+
+
+<% provide(:title, 'Frequesntly Asked Questions') %>
+<div class="insetBgd testimonial_banner"></div>
+<hr />
+<br />
+
+<div class="row">
+
+	<!-- end left -->
+<h1>FAQ</h1>
+	<section class="span12" >
+		<div class="well">
+
+			<div id="testimonials">
+				
+				<% @faqs.each do |faq| %>
+				
+				<h4>
+					<p>
+						<%= faq.question %>
+					</p>	
+				</h4>
+				
+				<blockquote>
+					<p>
+						<%= faq.answer %>
+					</p>	
+				</blockquote>
+					<% if user_signed_in? %>
+						<p class="testimonial-author">
+							<span><td><%= link_to 'Edit', edit_faq_path(faq) %></td></span> | <span><td><%= link_to 'Destroy', faq, method: :delete, data: { confirm: 'Are you sure?' } %></td></span>
+						</p>
+					<% end %>
+				<br />
+				<% end %>
+			</div>
+		</div><!--end well -->
+	</section><!--end right -->
+	
+	
+</div>
+
+<% if user_signed_in? %>
+	<%= link_to 'New Faq', new_faq_path %>
+<% end %>
